@@ -1,0 +1,183 @@
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>DNSPod API在线调试测试</title>
+    <link rel="stylesheet" type="text/css" href="alidns/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="alidns/css/ip_test.css" />
+    <script type="text/javascript" src="alidns/js/jquery.min.js"></script>
+    <script type="text/javascript" src="alidns/js/bootstrap.min.js"></script>
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
+</head>
+<body>
+	<header class="htmleaf-header">
+		<h1>阿里云DDNS API链接自动生成<span>API链接</span></h1>
+		<div class="htmleaf-links">
+			<a class="htmleaf-icon icon-htmleaf-home-outline" href="https://wendy8.com/" title="Wendy Network" target="_blank"><span> Wendy Network</span></a>
+			<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" href="https://wendy8.com/" title="返回上级" target="_blank"><span> 返回上级</span></a>
+		</div>
+		<div class="htmleaf-demo center">
+		  <a href="index.html" class="current">阿里云DDNS</a>
+		  <a href="dnspod.html">腾讯云DNSPOD</a>
+		  <a href="cloudflare.html">Cloudflare-DNSPOD(邮箱+key)</a>
+		  <a href="cloudflare2.html">Cloudflare-DNSPOD(Token)</a>
+		  <!--a href="index3.html">div</a-->
+		  <!--a href="index4.html">text参数</a-->
+		</div>
+	</header>
+  <div class="container-fluid top">
+    <div class="col-sm-12">
+      <div class="title">阿里云DDNS API链接自动生成</a>
+    </div>
+    <div class="col-sm-4 fix">
+      <form class="form-horizontal">
+        <div class="alert alert-success" role="alert"><b>域名信息填写区</b><br>红色的标题的为必填项<br>点一下输入框外面右侧会自动生成链接</div>
+        <div class="form-group">
+          <label class="col-xs-4 control-label red">AccessKey ID</label>
+          <div class="col-xs-8">
+            <input type="text" class="form-control" id="id" placeholder="请输入ID(必填)" onchange="tourl();" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-xs-4 control-label red">AccessKey secret</label>
+          <div class="col-xs-8">
+            <input type="text" class="form-control" id="token" placeholder="请输入secret(必填)" onchange="tourl();" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-xs-4 control-label red">域名</label>
+          <div class="col-xs-8">
+            <input type="text" class="form-control" id="domain" placeholder="请输入域名(必填)" onchange="tourl();" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-xs-4 control-label red">记录名</label>
+          <div class="col-xs-8">
+            <input type="text" class="form-control" id="sub" placeholder="请输入记录名(必填)" onchange="tourl();" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-xs-4 control-label">IP</label>
+          <div class="col-xs-8">
+            <input type="text" class="form-control" value="113.90.223.154" id="ip" onchange="tourl();" placeholder="请输入IP" >
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-xs-4 control-label">线路</label>
+          <div class="col-xs-8">
+            <select class="form-control" id="line" onchange="tourl();">
+              <option value=" ">自动识别-无需选择</option>
+              <option value="default">默认</option>
+              <option value="ctc">电信</option>
+              <option value="cucc">联通</option>
+              <option value="cernet">教育网</option>
+              <option value="cmcc">移动</option>
+              <option value="ctt">铁通</option>
+              <option value="home">国内</option>
+              <option value="abord">国外</option>
+              <option value="search">搜索引擎</option>
+              <option value="baidu">百度</option>
+              <option value="google">谷歌</option>
+              <option value="youdao">有道</option>
+              <option value="bing">必应</option>
+              <option value="soso">搜搜</option>
+              <option value="sogou">搜狗</option>
+              <option value="qihu">奇虎</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-xs-4 control-label">记录类型</label>
+          <div class="col-xs-8">
+            <select class="form-control" id="type"  onchange="tourl();">
+              <option value=" ">非必选</option>
+              <option value="A">IPv4</option>
+              <option value="AAAA">IPv6</option>
+              <option value="CNAME">CNAME</option>
+              <option value="MX">MX</option>
+            </select>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-sm-8 fix">
+      <div class="form-horizontal">
+      <div class="alert alert-success" role="alert"><b>域名自动生成区</b><br>如有任何问题请联系我<br><a href="//www.wendy-ip.com/?id=8" target="_blank">RouterOS软路由设置</a></div>
+        <div class="box">
+          <label>生成解析参数（带IP）：</label>
+          <div class="input-group">
+            <input type="text" id="url_0" class="form-control" onclick="copyUrl(0)" placeholder="自动生成链接" readonly>
+            <span class="input-group-addon" id="basic-addon2" onclick="copyUrl(0)">复制</span>
+          </div>
+        </div>
+        <div class="box">
+          <label>生成解析参数（不带IP）：</label>
+          <div class="input-group">
+            <input type="text" id="url_1" class="form-control" onclick="copyUrl(1)" placeholder="自动生成链接" readonly>
+            <span class="input-group-addon" id="basic-addon2" onclick="copyUrl(1)">复制</span>
+          </div>
+        </div>
+        <div class="box">
+          <label>生成本站API解析链接（带IP）：</label>
+          <div class="input-group">
+            <input type="text" id="url_2" class="form-control"  onclick="copyUrl(2)" placeholder="自动生成链接" readonly>
+            <span class="input-group-addon" id="basic-addon2" onclick="copyUrl(2)">复制</span>
+            <span class="input-group-addon" id="basic-addon2" onclick="tolink(2)">访问</span>
+          </div>
+        </div>
+        <div class="box">
+          <label>生成本站API解析链接（不带IP）：</label>
+          <div class="input-group">
+            <input type="text" id="url_3" class="form-control"  onclick="copyUrl(3)" placeholder="自动生成链接" readonly>
+            <span class="input-group-addon" id="basic-addon2" onclick="copyUrl(3)">复制</span>
+            <span class="input-group-addon" id="basic-addon2" onclick="tolink(3)">访问</span>
+          </div>
+        </div>
+        <div class="footer">
+          Copyright 2024 Wendy aliyun api
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    function tourl(obj) {
+      var id = document.getElementById("id").value;
+      var token = document.getElementById("token").value;
+      var sub = document.getElementById("sub").value;
+      var domain = document.getElementById("domain").value;
+      var ip = document.getElementById("ip").value;
+      var line = document.getElementById("line").value;
+      var type = document.getElementById("type").value;
+      login_token = '?id=' + id + '&secret=' + token;
+      document.getElementById('url_0').value = login_token+isnull(sub,'&record=')+isnull(domain,'&domain=')+isnull(ip,'&ip=')+isnull(line,'&line=')+isnull(type,'&type=');
+      document.getElementById('url_1').value = login_token+isnull(sub,'&record=')+isnull(domain,'&domain=')+isnull(line,'&line=')+isnull(type,'&type=');
+      document.getElementById('url_2').value = 'https://api.wddebug.com/alidns/'+login_token+isnull(sub,'&record=')+isnull(domain,'&domain=')+isnull(ip,'&ip=')+isnull(line,'&line=')+isnull(type,'&type=');
+      document.getElementById('url_3').value = 'https://api.wddebug.com/alidns/'+login_token+isnull(sub,'&record=')+isnull(domain,'&domain=')+isnull(line,'&line=')+isnull(type,'&type=');
+    }
+    function isnull(val,data) {
+      var str = val.replace(/(^\s*)|(\s*$)/g, '');//去除空格;
+      if (str == '' || str == undefined || str == null) {
+          return '';
+      } else {
+        return data + val;
+      }
+    }
+    function copyUrl(id) {
+        var Url=document.getElementById('url_'+id);
+        Url.select(); // 选择对象
+        document.execCommand("Copy"); // 执行浏览器复制命令
+        alert("复制成功！");
+    }
+    function tolink(id) {
+        var Url=document.getElementById('url_'+id);
+        window.open(Url.value);
+    }
+  </script>
+</html>
+
+</body>
+</html>

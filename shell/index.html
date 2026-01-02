@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>文件列表</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+ 
+        .directory {
+            font-weight: bold;
+            margin-bottom: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+ 
+        .directory-icon {
+            margin-right: 5px;
+        }
+ 
+        .file {
+            margin-left: 20px;
+        }
+ 
+        .file a {
+            text-decoration: none;
+            color: #0000EE;
+        }
+ 
+        .file a:hover {
+            text-decoration: underline;
+        }
+ 
+        .indent {
+            margin-left: 20px;
+        }
+ 
+        .collapsed {
+            display: none;
+        }
+ 
+        .file-size {
+            margin-right: 50px;
+        }
+    </style>
+    <script>
+        function toggleDirectory(element) {
+            var subDirectory = element.nextElementSibling;
+            if (subDirectory.style.display === 'none') {
+                subDirectory.style.display = 'block';
+            } else {
+                subDirectory.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+<h2>Index of /文件列表/</h2>
+ 
+ 
+<div style="width:650px;">
+<div class="file">
+	<span style="margin-right: 265px;">文件/文件夹</span>
+    <span style="margin-right: 95px;">大小</span>
+    <span class="file-modified" >Date 修改时间</span>
+</div>
+<hr>
+<div class="file"><a href="./AutoReinstall.sh" target="_blank">AutoReinstall.sh</a><span style="float: right;">2024-11-10 11:28:58</span><span class="file-size" style="float: right;">9.41KB</span></div><div class="file"><a href="./InstallNET.sh" target="_blank">InstallNET.sh</a><span style="float: right;">2024-11-10 11:28:59</span><span class="file-size" style="float: right;">32.5KB</span></div><div class="file"><a href="./bt.sh" target="_blank">bt.sh</a><span style="float: right;">2024-11-10 11:28:58</span><span class="file-size" style="float: right;">426B</span></div><div class="file"><a href="./centos76" target="_blank">centos76</a><span style="float: right;">2024-11-10 11:28:59</span><span class="file-size" style="float: right;">2.5KB</span></div><div class="file"><a href="./file.php" target="_blank">file.php</a><span style="float: right;">2024-11-10 11:29:36</span><span class="file-size" style="float: right;">3.75KB</span></div><div class="file"><a href="./l2ppcn.sh" target="_blank">l2ppcn.sh</a><span style="float: right;">2024-11-10 11:29:00</span><span class="file-size" style="float: right;">17.92KB</span></div><div class="file"><a href="./l2ppov.sh" target="_blank">l2ppov.sh</a><span style="float: right;">2024-11-10 11:29:00</span><span class="file-size" style="float: right;">17.87KB</span></div><div class="file"><a href="./l2tp.sh" target="_blank">l2tp.sh</a><span style="float: right;">2024-11-10 11:28:53</span><span class="file-size" style="float: right;">25.86KB</span></div><div class="file"><a href="./npc.sh" target="_blank">npc.sh</a><span style="float: right;">2024-11-10 11:28:54</span><span class="file-size" style="float: right;">4.97KB</span></div><div class="file"><a href="./nps.sh" target="_blank">nps.sh</a><span style="float: right;">2024-11-10 11:28:54</span><span class="file-size" style="float: right;">4.82KB</span></div><div class="file"><a href="./optimize.sh" target="_blank">optimize.sh</a><span style="float: right;">2024-11-10 11:28:55</span><span class="file-size" style="float: right;">2.75KB</span></div><div class="file"><a href="./reinstall.sh" target="_blank">reinstall.sh</a><span style="float: right;">2024-11-10 11:28:55</span><span class="file-size" style="float: right;">33.53KB</span></div><div class="file"><a href="./script.sh" target="_blank">script.sh</a><span style="float: right;">2024-11-10 11:28:55</span><span class="file-size" style="float: right;">260B</span></div><div class="file"><a href="./tcp.sh" target="_blank">tcp.sh</a><span style="float: right;">2024-11-10 11:28:56</span><span class="file-size" style="float: right;">81.41KB</span></div><div class="file"><a href="./tcp2.sh" target="_blank">tcp2.sh</a><span style="float: right;">2024-11-10 11:28:56</span><span class="file-size" style="float: right;">24.2KB</span></div><div class="file"><a href="./unifi-8.5.6.sh" target="_blank">unifi-8.5.6.sh</a><span style="float: right;">2024-11-10 11:28:57</span><span class="file-size" style="float: right;">449.26KB</span></div><div class="file"><a href="./wdos.sh" target="_blank">wdos.sh</a><span style="float: right;">2024-11-10 11:28:57</span><span class="file-size" style="float: right;">9.5KB</span></div><br> 
+</div>
+ 
+</body>
+</html>
