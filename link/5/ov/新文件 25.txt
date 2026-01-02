@@ -1,0 +1,22 @@
+/interface l2tp-client
+add comment=changsha connect-to=localros.wendy-ip.com disabled=no name=wuhu-l2tp-out1 password=wd123 user=wuhu9
+add comment=guangzhou connect-to=localros.wendy-ip.com disabled=no name=guangzhou-l2tp-out1 password=wd123 user=guangzhou9
+add comment=guiyang connect-to=localros.wendy-ip.com disabled=no name=guiyang-l2tp-out1 password=wd123 user=guiyang9
+add comment=wuhan connect-to=localros.wendy-ip.com disabled=no name=wuhan-l2tp-out1 password=wd123 user=wuhan9
+add comment=changsha connect-to=localros.wendy-ip.com disabled=no name=changsha-l2tp-out1 password=wd123 user=changsha9
+add comment=suzhou connect-to=localros.wendy-ip.com disabled=no name=suzhou-l2tp-out1 password=wd123 user=suzhou9
+add comment=shanghai connect-to=localros.wendy-ip.com disabled=no name=shanghai-l2tp-out1 password=wd123 user=shanghai9
+add comment=chengdu connect-to=localros.wendy-ip.com disabled=no name=chengdu-l2tp-out1 password=wd123 user=chengdu9
+add comment=hangzhou connect-to=localros.wendy-ip.com disabled=no name=hangzhou-l2tp-out1 password=wd123 user=hangzhou9
+add comment=chongqing connect-to=localros.wendy-ip.com disabled=no name=chongqing-l2tp-out1 password=wd123 user=chongqing9
+/ip route
+add comment=wuhu disabled=no distance=1 dst-address=0.0.0.0/0 gateway=wuhu-l2tp-out1 routing-table=wuhu
+add comment=guangzhou disabled=no distance=1 dst-address=0.0.0.0/0 gateway=guangzhou-l2tp-out1 routing-table=guangzhou
+add comment=guiyang disabled=no distance=1 dst-address=0.0.0.0/0 gateway=guiyang-l2tp-out1 routing-table=guiyang
+add comment=wuhan disabled=no distance=1 dst-address=0.0.0.0/0 gateway=wuhan-l2tp-out1 routing-table=wuhan
+add comment=changsha disabled=no distance=1 dst-address=0.0.0.0/0 gateway=changsha-l2tp-out1 routing-table=changsha
+add comment=suzhou disabled=no distance=1 dst-address=0.0.0.0/0 gateway=suzhou-l2tp-out1 routing-table=suzhou
+add comment=shanghai disabled=no distance=1 dst-address=0.0.0.0/0 gateway=shanghai-l2tp-out1 routing-table=shanghai
+add comment=chengdu disabled=no distance=1 dst-address=0.0.0.0/0 gateway=chengdu-l2tp-out1 routing-table=chengdu
+add comment=hangzhou disabled=no distance=1 dst-address=0.0.0.0/0 gateway=hangzhou-l2tp-out1 routing-table=hangzhou
+add comment=chongqing disabled=no distance=1 dst-address=0.0.0.0/0 gateway=chongqing-l2tp-out1 routing-table=chongqing

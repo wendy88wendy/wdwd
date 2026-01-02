@@ -1,0 +1,1350 @@
+<html style="transform: none;">
+<script type="text/javascript">   
+function password() {   
+var testV = 1;   
+var pass1 = prompt('请输入密码','');   
+while (testV < 3) {   
+if (!pass1)   
+history.go(-1);   
+if (pass1 == "Wd8264") {//初始密码123
+alert('密码正确');   
+break;   
+}   
+testV+=1;   
+var pass1 =   
+prompt('密码错误!请重新输入:');   
+}   
+if (pass1!="password" & testV ==3)   
+history.go(-1);   
+return " ";   
+}   
+document.write(password());   
+</script>
+<style>
+body {
+    background-image: url('https://wendy-blog.github.io/wendy-ip.com/images/background/background.jpg'); /* 替换成你的图片路径 */
+    background-size: cover; /* 图片覆盖整个背景区域 */
+    /*background-repeat: no-repeat;  不重复图片 */
+    background-position: center; /* 图片居中 */
+    /* 确保背景固定，即使滚动也不动 (可选) */
+    /* background-attachment: fixed; */
+}
+</style>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="content-language" content="zh_CN">
+        <title>命令备忘（Linux） - Wendy-Blog</title>        <meta name="keywords" content="">
+    <meta name="description" content="setup-ipsec-vpn wget https://github.com/wendy88wendy/setup-ipsec-vpn/raw/refs/heads/master/vpn.sh -O vpn.sh sudo VPN_IPSEC_PSK='666888' \ VPN_USER=...">
+
+
+
+<link rel="canonical" href="https://wendy8.com/archives/33">    <meta name="robots" content="noindex, nofollow">
+<style id="wp-img-auto-sizes-contain-inline-css" type="text/css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel="stylesheet" id="puock-libs-css" data-no-instant="" href="https://wd-cssjs.github.io/html/puock/assets/dist/style/libs.min.css?ver=2.8.16" type="text/css" media="all">
+<link rel="stylesheet" id="puock-css" data-no-instant="" href="https://wd-cssjs.github.io/html/puock/assets/dist/style/style.min.css?ver=2.8.16" type="text/css" media="all">
+<style id="puock-inline-css" type="text/css">
+body{--pk-c-primary:#1c60f3}
+:root{--puock-block-not-tran:100%}
+/*# sourceURL=puock-inline-css */
+</style>
+<style id="wp-block-library-inline-css" type="text/css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=wp-block-library-inline-css */
+</style><style id="wp-block-heading-inline-css" type="text/css">
+h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
+/*# sourceURL=https://wendy8.com/wp-includes/blocks/heading/style.min.css */
+</style>
+<style id="wp-block-latest-comments-inline-css" type="text/css">
+ol.wp-block-latest-comments{box-sizing:border-box;margin-left:0}:where(.wp-block-latest-comments:not([style*=line-height] .wp-block-latest-comments__comment)){line-height:1.1}:where(.wp-block-latest-comments:not([style*=line-height] .wp-block-latest-comments__comment-excerpt p)){line-height:1.8}.has-dates :where(.wp-block-latest-comments:not([style*=line-height])),.has-excerpts :where(.wp-block-latest-comments:not([style*=line-height])){line-height:1.5}.wp-block-latest-comments .wp-block-latest-comments{padding-left:0}.wp-block-latest-comments__comment{list-style:none;margin-bottom:1em}.has-avatars .wp-block-latest-comments__comment{list-style:none;min-height:2.25em}.has-avatars .wp-block-latest-comments__comment .wp-block-latest-comments__comment-excerpt,.has-avatars .wp-block-latest-comments__comment .wp-block-latest-comments__comment-meta{margin-left:3.25em}.wp-block-latest-comments__comment-excerpt p{font-size:.875em;margin:.36em 0 1.4em}.wp-block-latest-comments__comment-date{display:block;font-size:.75em}.wp-block-latest-comments .avatar,.wp-block-latest-comments__comment-avatar{border-radius:1.5em;display:block;float:left;height:2.5em;margin-right:.75em;width:2.5em}.wp-block-latest-comments[class*=-font-size] a,.wp-block-latest-comments[style*=font-size] a{font-size:inherit}
+/*# sourceURL=https://wendy8.com/wp-includes/blocks/latest-comments/style.min.css */
+</style>
+<style id="wp-block-latest-posts-inline-css" type="text/css">
+.wp-block-latest-posts{box-sizing:border-box}.wp-block-latest-posts.alignleft{margin-right:2em}.wp-block-latest-posts.alignright{margin-left:2em}.wp-block-latest-posts.wp-block-latest-posts__list{list-style:none}.wp-block-latest-posts.wp-block-latest-posts__list li{clear:both;overflow-wrap:break-word}.wp-block-latest-posts.is-grid{display:flex;flex-wrap:wrap}.wp-block-latest-posts.is-grid li{margin:0 1.25em 1.25em 0;width:100%}@media (min-width:600px){.wp-block-latest-posts.columns-2 li{width:calc(50% - .625em)}.wp-block-latest-posts.columns-2 li:nth-child(2n){margin-right:0}.wp-block-latest-posts.columns-3 li{width:calc(33.33333% - .83333em)}.wp-block-latest-posts.columns-3 li:nth-child(3n){margin-right:0}.wp-block-latest-posts.columns-4 li{width:calc(25% - .9375em)}.wp-block-latest-posts.columns-4 li:nth-child(4n){margin-right:0}.wp-block-latest-posts.columns-5 li{width:calc(20% - 1em)}.wp-block-latest-posts.columns-5 li:nth-child(5n){margin-right:0}.wp-block-latest-posts.columns-6 li{width:calc(16.66667% - 1.04167em)}.wp-block-latest-posts.columns-6 li:nth-child(6n){margin-right:0}}:root :where(.wp-block-latest-posts.is-grid){padding:0}:root :where(.wp-block-latest-posts.wp-block-latest-posts__list){padding-left:0}.wp-block-latest-posts__post-author,.wp-block-latest-posts__post-date{display:block;font-size:.8125em}.wp-block-latest-posts__post-excerpt,.wp-block-latest-posts__post-full-content{margin-bottom:1em;margin-top:.5em}.wp-block-latest-posts__featured-image a{display:inline-block}.wp-block-latest-posts__featured-image img{height:auto;max-width:100%;width:auto}.wp-block-latest-posts__featured-image.alignleft{float:left;margin-right:1em}.wp-block-latest-posts__featured-image.alignright{float:right;margin-left:1em}.wp-block-latest-posts__featured-image.aligncenter{margin-bottom:1em;text-align:center}
+/*# sourceURL=https://wendy8.com/wp-includes/blocks/latest-posts/style.min.css */
+</style>
+<style id="wp-block-search-inline-css" type="text/css">
+.wp-block-search__button{margin-left:10px;word-break:normal}.wp-block-search__button.has-icon{line-height:0}.wp-block-search__button svg{height:1.25em;min-height:24px;min-width:24px;width:1.25em;fill:currentColor;vertical-align:text-bottom}:where(.wp-block-search__button){border:1px solid #ccc;padding:6px 10px}.wp-block-search__inside-wrapper{display:flex;flex:auto;flex-wrap:nowrap;max-width:100%}.wp-block-search__label{width:100%}.wp-block-search.wp-block-search__button-only .wp-block-search__button{box-sizing:border-box;display:flex;flex-shrink:0;justify-content:center;margin-left:0;max-width:100%}.wp-block-search.wp-block-search__button-only .wp-block-search__inside-wrapper{min-width:0!important;transition-property:width}.wp-block-search.wp-block-search__button-only .wp-block-search__input{flex-basis:100%;transition-duration:.3s}.wp-block-search.wp-block-search__button-only.wp-block-search__searchfield-hidden,.wp-block-search.wp-block-search__button-only.wp-block-search__searchfield-hidden .wp-block-search__inside-wrapper{overflow:hidden}.wp-block-search.wp-block-search__button-only.wp-block-search__searchfield-hidden .wp-block-search__input{border-left-width:0!important;border-right-width:0!important;flex-basis:0;flex-grow:0;margin:0;min-width:0!important;padding-left:0!important;padding-right:0!important;width:0!important}:where(.wp-block-search__input){appearance:none;border:1px solid #949494;flex-grow:1;font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;margin-left:0;margin-right:0;min-width:3rem;padding:8px;text-decoration:unset!important;text-transform:inherit}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper){background-color:#fff;border:1px solid #949494;box-sizing:border-box;padding:4px}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) .wp-block-search__input{border:none;border-radius:0;padding:0 4px}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) .wp-block-search__input:focus{outline:none}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) :where(.wp-block-search__button){padding:4px 8px}.wp-block-search.aligncenter .wp-block-search__inside-wrapper{margin:auto}.wp-block[data-align=right] .wp-block-search.wp-block-search__button-only .wp-block-search__inside-wrapper{float:right}
+/*# sourceURL=https://wendy8.com/wp-includes/blocks/search/style.min.css */
+</style>
+<style id="wp-block-code-inline-css" type="text/css">
+.wp-block-code{box-sizing:border-box}.wp-block-code code{
+  /*!rtl:begin:ignore*/direction:ltr;display:block;font-family:inherit;overflow-wrap:break-word;text-align:initial;white-space:pre-wrap
+  /*!rtl:end:ignore*/}
+/*# sourceURL=https://wendy8.com/wp-includes/blocks/code/style.min.css */
+</style>
+<style id="wp-block-group-inline-css" type="text/css">
+.wp-block-group{box-sizing:border-box}:where(.wp-block-group.wp-block-group-is-layout-constrained){position:relative}
+/*# sourceURL=https://wendy8.com/wp-includes/blocks/group/style.min.css */
+</style>
+<style id="wp-block-paragraph-inline-css" type="text/css">
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://wendy8.com/wp-includes/blocks/paragraph/style.min.css */
+</style>
+<style id="global-styles-inline-css" type="text/css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<script type="text/javascript" src="https://wendy8.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<link rel="icon" href="https://wd-cssjs.github.io/html/logo-32x32.png" sizes="32x32">
+<link rel="icon" href="https://wd-cssjs.github.io/html/logo-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://wd-cssjs.github.io/html/logo-180x180.png">
+<meta name="msapplication-TileImage" content="https://wd-cssjs.github.io/html/logo-270x270.png">
+    <style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style><link rel="stylesheet" href="https://wd-cssjs.github.io/html/puock/assets/libs/layer/theme/default/layer.css?v=3.5.1" id="layuicss-layer"><style id="theia-sticky-sidebar-stylesheet-TSS">.theiaStickySidebar:after {content: ""; display: table; clear: both;}</style></head>
+<body class="custom-background puock-dark" style="transform: none;">
+<div style="transform: none;">
+            <div class="progress" id="page-read-progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" role="progressbar" style="width:0%"></div>
+        </div>
+        <div id="header-box" class=""></div>
+    <header id="header" class=" blur">
+        <div class="navbar navbar-dark shadow-sm">
+            <div class="container">
+                <a href="https://wendy8.com" id="logo" class="navbar-brand logo-loop-light">
+                                            <span class="puock-text txt-logo">Wendy-Blog</span>
+                                    </a>
+                <div class="d-none d-lg-block puock-links">
+                    <div id="menus" class="t-md ">
+                        <ul></ul>                    </div>
+                </div>
+                <div class="mobile-menus d-block d-lg-none p-1 puock-text">
+                    <i class="fa fa-bars t-md mr-2 mobile-menu-s"></i>
+                                            <i class="fa colorMode t-md mr-2 fa-circle-half-stroke"></i>
+                                        <i class="search-modal-btn fa fa-search t-md position-relative" style="top:0.5px"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="search" class="d-none">
+        <div class="w-100 d-flex justify-content-center">
+            <div id="search-main" class="container p-block">
+                <form class="global-search-form" action="https://wendy8.com">
+                    <div class="search-layout">
+                        <div class="search-input">
+                            <input required="" type="text" name="s" class="form-control" placeholder="请输入搜索关键字">
+                        </div>
+                        <div class="search-start">
+                            <button type="submit" class="btn-dark btn"><i class="fa fa-search mr-1"></i>搜索</button>
+                        </div>
+                        <div class="search-close-btn">
+                            <button type="button" class="btn-danger btn ml-1 search-modal-btn"><i class="fa fa-close"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="mobile-menu" class="d-none">
+        <div class="menus">
+            <div class="p-block">
+                <div class="text-end"><i class="fa fa-close t-xl puock-link mobile-menu-close ta3"></i></div>
+                <nav>
+                    <!--ul class="puock-links t-md"><li><a data-no-instant="" data-bs-toggle="tooltip" href="https://wendy8.com/wp-admin/profile.php" aria-label="用户中心" data-bs-original-title="用户中心"><img alt="用户中心" src="https://secure.gravatar.com/avatar/7a20cf8d31fff85ddd0c8b51b1338d76d78c40964d0e6085a84fee119cf3b1a3?s=96&amp;d=mm&amp;r=g" class="min-avatar"></a></li></ul>                </nav-->
+            </div>
+        </div>
+    </div>
+    <div id="mobile-menu-backdrop" class="modal-backdrop d-none"></div>
+    <div id="search-backdrop" class="modal-backdrop d-none"></div>
+
+    <div id="post" class="container mt20" style="transform: none;">
+        <!--全局上方-->
+        <div id="breadcrumb" class=""><nav aria-label="breadcrumb"></nav></div>        <!--内页上方-->
+        <div class="row row-cols-1 post-row" style="transform: none;">
+            <div id="post-main" class="col-md-12 col-lg-12" style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
+                
+                                                                <!--内页中-->
+                                
+
+                                    <!--评论上方-->
+    
+                            <div class="theiaStickySidebar" style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none;"><div class="p-block">
+                    <div><h1 id="post-title" class="mb-0 puock-text t-xxl">私密：命令备忘（Linux）</h1></div>
+                    
+                    <div class="mt20 entry-content-box">
+                        <div class="entry-content content-main puock-text ">
+                                                        <p class="has-text-align-center"><strong>setup-ipsec-vpn</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-0"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-0"></i></div></div></div><pre class="wp-block-code hljs language-csharp" id="hljs-item-0"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="1"><div class="hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="1">wget https:<span class="hljs-comment">//github.com/wendy88wendy/setup-ipsec-vpn/raw/refs/heads/master/vpn.sh -O vpn.sh</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="2"><div class="hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="2">sudo VPN_IPSEC_PSK=<span class="hljs-string">'666888'</span> \</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="3"><div class="hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="3">VPN_USER=<span class="hljs-string">'wdvpn'</span> \</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="4"><div class="hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="4">VPN_PASSWORD=<span class="hljs-string">'wd123'</span> \</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="5"><div class="hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="5">sh vpn.sh</td></tr></tbody></table></pre>
+<p class="has-text-align-center has-medium-font-size"><strong><strong>CenrOS 7.6vault yum源</strong></strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-1"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-1"></i></div></div></div><pre class="wp-block-code hljs language-cpp" id="hljs-item-1">wget -O /etc/yum.repos.d/CentOS-Base.repo https:<span class="hljs-comment">//wendycode.net/repo/centos7.6-vault.repo</span></pre>
+<p class="has-text-align-center"><strong>CenrOS 7.9vault yum源</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-2"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-2"></i></div></div></div><pre class="wp-block-code hljs language-cpp" id="hljs-item-2">curl -o /etc/yum.repos.d/CentOS-Base.repo https:<span class="hljs-comment">//wendycode.net/repo/centos7.9-vault.repo &amp;&amp; yum clean all &amp;&amp; yum makecache</span></pre>
+<p class="has-text-align-center"><strong>CenrOS 7关闭防火墙</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-3"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-3"></i></div></div></div><pre class="wp-block-code hljs language-bash" id="hljs-item-3">systemctl stop firewalld &amp;&amp; systemctl <span class="hljs-built_in">disable</span> firewalld &amp;&amp; systemctl mask firewalld</pre>
+<p class="has-text-align-center"><strong>CentOS基础安装</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-4"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-4"></i></div></div></div><pre class="wp-block-code hljs language-go" id="hljs-item-4">yum -y install wget vim net-tools cronie gcc <span class="hljs-built_in">make</span> unzip</pre>
+<p class="has-text-align-center"><strong>操作系统检测</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-5"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-5"></i></div></div></div><pre class="wp-block-code hljs language-bash" id="hljs-item-5">bash &lt;(curl -sSL <span class="hljs-string">"https://wendycode.net/shell/check_os.sh"</span>)</pre>
+<p class="has-text-align-center"><strong>启动方式检测</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-6"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-6"></i></div></div></div><pre class="wp-block-code hljs language-bash" id="hljs-item-6">bash &lt;(curl -sSL <span class="hljs-string">"https://wendycode.net/shell/check_efi.sh"</span>)</pre>
+<p class="has-text-align-center"><strong>Socks5</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-7"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-7"></i></div></div></div><pre class="wp-block-code hljs language-rust" id="hljs-item-7">bash &lt;(curl -sSL --header <span class="hljs-symbol">'Content</span>-Type: application/json;charset=UTF-<span class="hljs-number">8</span><span class="hljs-string">' '</span>https:<span class="hljs-comment">//gitee.com/api/v5/repos/wendy-tools/socks5/raw/ss5-install?access_token=e714ea221d82ae604117e8410d2d309e')</span></pre>
+<p class="has-text-align-center"><strong>SS-Gitcode</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-8"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-8"></i></div></div></div><pre class="wp-block-code hljs language-bash" id="hljs-item-8">bash &lt;(curl -sSL <span class="hljs-string">"https://gitcode.net/m0_69258028/software/-/raw/master/shell/ss.sh"</span>)</pre>
+<p class="has-text-align-center"><strong>SSR-Gitcode</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-9"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-9"></i></div></div></div><pre class="wp-block-code hljs language-bash" id="hljs-item-9">bash &lt;(curl -sSL <span class="hljs-string">"https://gitcode.net/m0_69258028/software/-/raw/master/shell/ssr.sh"</span>)</pre>
+<p class="has-text-align-center"><strong>Socks5-Gitcode</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-10"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-10"></i></div></div></div><pre class="wp-block-code hljs language-rust" id="hljs-item-10">bash &lt;(curl -sSL --header <span class="hljs-symbol">'Content</span>-Type: application/json;charset=UTF-<span class="hljs-number">8</span><span class="hljs-string">' '</span>https:<span class="hljs-comment">//gitee.com/api/v5/repos/wendy-tools/socks5/raw/ss5-install?access_token=e714ea221d82ae604117e8410d2d309e')</span></pre>
+<p class="has-text-align-center"><strong>L2PP-Gitcode</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-11"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-11"></i></div></div></div><pre class="wp-block-code hljs language-bash" id="hljs-item-11">bash &lt;(curl -sSL <span class="hljs-string">"https://gitcode.net/m0_69258028/software/-/raw/master/shell/l2pp.sh"</span>)</pre>
+<p class="has-text-align-center"><strong>L2PP-Gitee</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-12"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-12"></i></div></div></div><pre class="wp-block-code hljs language-bash" id="hljs-item-12">bash &lt;(curl -sSL <span class="hljs-string">"https://gitee.com/wendyai77/shell/raw/master/sh/l2pp.sh"</span>)</pre>
+<p class="has-text-align-center"><strong>L2PP-GitHub</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-13"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-13"></i></div></div></div><pre class="wp-block-code hljs language-bash" id="hljs-item-13">bash &lt;(curl -sSL <span class="hljs-string">"https://wendycode.net/shell/l2ppov.sh"</span>)</pre>
+<p class="has-text-align-center"><strong>mtproxy_go</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-14"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-14"></i></div></div></div><pre class="wp-block-code hljs language-bash" id="hljs-item-14">bash &lt;(curl -sSL <span class="hljs-string">"https://wendycode.net/shell/mtproxy_go.sh"</span>)</pre>
+<div class="pk-code-tools" data-pre-id="hljs-item-15"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-15"></i></div></div></div><pre class="wp-block-code hljs language-bash" id="hljs-item-15">bash &lt;(curl -sSL <span class="hljs-string">"https://github.com/wendy88wendy/code/raw/refs/heads/main/shell/mtproxy_go.sh"</span>)</pre>
+<div class="pk-code-tools" data-pre-id="hljs-item-16"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-16"></i></div></div></div><pre class="wp-block-code hljs language-bash" id="hljs-item-16">bash &lt;(curl -sSL <span class="hljs-string">"https://github.com/whunt1/onekeymakemtg/raw/master/mtproxy_go.sh"</span>)</pre>
+<div class="pk-code-tools" data-pre-id="hljs-item-17"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-17"></i></div></div></div><pre class="wp-block-code hljs language-bash" id="hljs-item-17">vim /usr/<span class="hljs-built_in">local</span>/mtproxy-go/mtproxy.conf</pre>
+<div class="pk-code-tools" data-pre-id="hljs-item-18"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-18"></i></div></div></div><pre class="wp-block-code hljs language-undefined" id="hljs-item-18">dd123456789012345678901234567890</pre>
+<div class="pk-code-tools" data-pre-id="hljs-item-19"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-19"></i></div></div></div><pre class="wp-block-code hljs language-csharp" id="hljs-item-19">/etc/rc.d/<span class="hljs-keyword">init</span>.d/mtproxy-go restart</pre>
+<p class="has-text-align-center"><strong>sed一键替换命令</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-20"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-20"></i></div></div></div><pre class="wp-block-code hljs language-bash" id="hljs-item-20">sed -i <span class="hljs-string">'s|原|替|g'</span> 文件</pre>
+<p class="has-text-align-center"><strong>Unifi一键脚本</strong></p>
+<p>确保已安装 ca-certificates 软件包。</p>
+<p>下载并运行脚本！</p>
+<div class="pk-code-tools" data-pre-id="hljs-item-21"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-21"></i></div></div></div><pre class="wp-block-code hljs language-sql" id="hljs-item-21">apt<span class="hljs-operator">-</span><span class="hljs-keyword">get</span> <span class="hljs-keyword">update</span>; apt<span class="hljs-operator">-</span><span class="hljs-keyword">get</span> install ca<span class="hljs-operator">-</span>certificates curl <span class="hljs-operator">-</span>y</pre>
+<p><em>（请将其更改为您需要的版本）</em></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-22"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-22"></i></div></div></div><pre class="wp-block-code hljs language-perl" id="hljs-item-22">wget https:<span class="hljs-regexp">//g</span>et.glennr.nl/unifi/install/unifi-<span class="hljs-number">9.5</span>.<span class="hljs-number">21</span>.sh &amp;&amp; <span class="hljs-keyword">chmod</span> +<span class="hljs-keyword">x</span> unifi-<span class="hljs-number">9.5</span>.<span class="hljs-number">21</span>.sh &amp;&amp; bash unifi-<span class="hljs-number">9.5</span>.<span class="hljs-number">21</span>.sh</pre>
+<p class="has-text-align-center"><strong><strong>WendyTools 安装命令</strong></strong></p>
+<p></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-23"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-23"></i></div></div></div><pre class="wp-block-code hljs language-bash" id="hljs-item-23"><span class="hljs-built_in">source</span> &lt;(curl -sSL --header <span class="hljs-string">'Content-Type: application/json;charset=UTF-8'</span> <span class="hljs-string">'https://gitee.com/api/v5/repos/wendy-tools/wdtools/raw/setup.sh?access_token=e714ea221d82ae604117e8410d2d309e'</span>)</pre>
+<p class="has-text-align-center"><strong>Linux启动检测</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-24"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-24"></i></div></div></div><pre class="wp-block-code hljs language-bash" id="hljs-item-24">bash &lt;(curl -sSL  <span class="hljs-string">"https://wendy-ip.com/download/shell/check_efi.sh"</span>)</pre>
+<div class="pk-code-tools" data-pre-id="hljs-item-25"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-25"></i></div></div></div><pre class="wp-block-code hljs language-perl" id="hljs-item-25">wget -O check_efi.sh https:<span class="hljs-regexp">//</span>wendy-ip.com/download/shell/check_efi.sh &amp;&amp; <span class="hljs-keyword">chmod</span> +<span class="hljs-keyword">x</span> check_efi.sh &amp;&amp; ./check_efi.sh &amp;&amp; rm -rf check_efi.sh</pre>
+<div class="pk-code-tools" data-pre-id="hljs-item-26"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-26"></i></div></div></div><pre class="wp-block-code hljs language-perl" id="hljs-item-26">dmesg | <span class="hljs-keyword">grep</span> -i efi</pre>
+<div class="pk-code-tools" data-pre-id="hljs-item-27"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-27"></i></div></div></div><pre class="wp-block-code hljs language-undefined" id="hljs-item-27">ls /sys/firmware/efi</pre>
+<p class="has-text-align-center"><strong>正常修改配置&nbsp;</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-28"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-28"></i></div></div></div><pre class="wp-block-code hljs language-undefined" id="hljs-item-28">vi /etc/grub2.cfg</pre>
+<p class="has-text-align-center"><strong>EFI启动的生效方式，重启生效</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-29"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-29"></i></div></div></div><pre class="wp-block-code hljs language-undefined" id="hljs-item-29">grub2-mkconfig -o /boot/efi/EFI/redhat/grub.cfg</pre>
+<p class="has-text-align-center"><strong>CSM启动的生效方式，重启生效</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-30"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-30"></i></div></div></div><pre class="wp-block-code hljs language-undefined" id="hljs-item-30">grub2-mkconfig -o /boot/grub2/grub.cfg</pre>
+<p class="has-text-align-center"><strong>宝塔安装命令</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-31"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-31"></i></div></div></div><pre class="wp-block-code hljs language-rust" id="hljs-item-31">bash &lt;(curl -sSL <span class="hljs-symbol">'https</span>:<span class="hljs-comment">//wendycode.net/shell/bt.sh')</span></pre>
+<p class="has-text-align-center"><strong>宝 塔 面 板 卸 载 命 令</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-32"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-32"></i></div></div></div><pre class="wp-block-code hljs language-rust" id="hljs-item-32">bash &lt;(curl -sSL <span class="hljs-symbol">'http</span>:<span class="hljs-comment">//download.bt.cn/install/bt-uninstall.sh')</span></pre>
+<p class="has-text-align-center"><strong>Appnode面板（同时安装控制中心和受控端）</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-33"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-33"></i></div></div></div><pre class="wp-block-code hljs language-ini" id="hljs-item-33"><span class="hljs-attr">INSTALL_AGENT</span>=<span class="hljs-number">1</span> INIT_SWAPFILE=<span class="hljs-number">1</span> bash -c <span class="hljs-string">"$(curl -sS http://dl.appnode.com/install.sh)"</span></pre>
+<p class="has-text-align-center"><strong>Appnode ccenter（控制中心）卸载</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-34"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-34"></i></div></div></div><pre class="wp-block-code hljs language-csharp" id="hljs-item-34">appnode ccenter stop &amp;&amp; appnode ccenter <span class="hljs-keyword">remove</span></pre>
+<p class="has-text-align-center"><strong>Appnode agent（受控端）卸载</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-35"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-35"></i></div></div></div><pre class="wp-block-code hljs language-csharp" id="hljs-item-35">appnode agent stop &amp;&amp; appnode agent <span class="hljs-keyword">remove</span></pre>
+<p class="has-text-align-center"><strong>Ubuntu 20.04 修改主机名</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-36"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-36"></i></div></div></div><pre class="wp-block-code hljs language-cpp" id="hljs-item-36">hostnamectl set-hostname 主机名</pre>
+<p class="has-text-align-center"><strong>国内服务器DNS设置</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-37"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-37"></i></div></div></div><pre class="wp-block-code hljs language-bash" id="hljs-item-37"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="1"><div class="hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="1">cat &gt;/etc/resolv.conf&lt;&lt;<span class="hljs-string"><span class="hljs-string">EOF</span></span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="2"><div class="hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="2"><span class="hljs-string">nameserver 223.5.5.5</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="3"><div class="hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="3"><span class="hljs-string">nameserver 8.8.8.8</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="4"><div class="hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="4"><span class="hljs-string">EOF</span></td></tr></tbody></table></pre>
+<p class="has-text-align-center"><strong>海外服务器DNS设置</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-38"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-38"></i></div></div></div><pre class="wp-block-code hljs language-bash" id="hljs-item-38"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="1"><div class="hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="1">cat &gt;/etc/resolv.conf&lt;&lt;<span class="hljs-string"><span class="hljs-string">EOF</span></span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="2"><div class="hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="2"><span class="hljs-string">nameserver 8.8.8.8</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="3"><div class="hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="3"><span class="hljs-string">nameserver 223.5.5.5</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="4"><div class="hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="4"><span class="hljs-string">EOF</span></td></tr></tbody></table></pre>
+<p class="has-text-align-center"><strong>卸载腾讯云监控</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-39"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-39"></i></div></div></div><pre class="wp-block-code hljs language-bash" id="hljs-item-39"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="1"><div class="hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="1">/usr/<span class="hljs-built_in">local</span>/qcloud/stargate/admin/uninstall.sh</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="2"><div class="hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="2">/usr/<span class="hljs-built_in">local</span>/qcloud/YunJing/uninst.sh</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="3"><div class="hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="3">/usr/<span class="hljs-built_in">local</span>/qcloud/monitor/barad/admin/uninstall.sh</td></tr></tbody></table></pre>
+<p class="has-text-align-center"><strong>卸载阿里云监控</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-40"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-40"></i></div></div></div><pre class="wp-block-code hljs language-rust" id="hljs-item-40"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="1"><div class="hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="1">bash &lt;(curl -sSL <span class="hljs-symbol">'http</span>:<span class="hljs-comment">//update.aegis.aliyun.com/download/uninstall.sh')</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="2"><div class="hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="2">bash &lt;(curl -sSL <span class="hljs-symbol">'http</span>:<span class="hljs-comment">//update.aegis.aliyun.com/download/quartz_uninstall.sh')</span></td></tr></tbody></table></pre>
+<div class="pk-code-tools" data-pre-id="hljs-item-41"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-41"></i></div></div></div><pre class="wp-block-code hljs language-rust" id="hljs-item-41"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="1"><div class="hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="1">bash &lt;(curl -sSL <span class="hljs-symbol">'https</span>:<span class="hljs-comment">//wendycode.net/shell/aly/uninstall.sh')</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="2"><div class="hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="2">bash &lt;(curl -sSL <span class="hljs-symbol">'https</span>:<span class="hljs-comment">//wendycode.net/shell/aly/quartz_uninstall.sh')</span></td></tr></tbody></table></pre>
+<p class="has-text-align-center"><strong>卸载残留</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-42"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-42"></i></div></div></div><pre class="wp-block-code hljs language-bash" id="hljs-item-42"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="1"><div class="hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="1">pkill aliyun-service</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="2"><div class="hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="2">rm -fr /etc/init.d/agentwatch /usr/sbin/aliyun-service</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="3"><div class="hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="3">rm -rf /usr/<span class="hljs-built_in">local</span>/aegis*</td></tr></tbody></table></pre>
+<p class="has-text-align-center"><strong>Unifi安装脚本</strong>（GitHub）</p>
+<div class="pk-code-tools" data-pre-id="hljs-item-43"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-43"></i></div></div></div><pre class="wp-block-code hljs language-perl" id="hljs-item-43">wget --<span class="hljs-keyword">no</span>-check-certificate https:<span class="hljs-regexp">//</span>wendycode.net/shell/unifi-<span class="hljs-number">8.4</span>.<span class="hljs-number">62</span>.sh &amp;&amp; <span class="hljs-keyword">chmod</span> a+<span class="hljs-keyword">x</span> unifi-<span class="hljs-number">8.4</span>.<span class="hljs-number">62</span>.sh &amp;&amp; bash unifi-<span class="hljs-number">8.4</span>.<span class="hljs-number">62</span>.sh</pre>
+<p class="has-text-align-center"><strong>Unifi安装脚本</strong>(Gitee)</p>
+<div class="pk-code-tools" data-pre-id="hljs-item-44"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-44"></i></div></div></div><pre class="wp-block-code hljs language-perl" id="hljs-item-44">wget --<span class="hljs-keyword">no</span>-check-certificate https:<span class="hljs-regexp">//gi</span>tee.com/wendy-tools/wget/raw/master/shell/unifi-<span class="hljs-number">8.4</span>.<span class="hljs-number">62</span>.sh &amp;&amp; <span class="hljs-keyword">chmod</span> a+<span class="hljs-keyword">x</span> unifi-<span class="hljs-number">8.4</span>.<span class="hljs-number">62</span>.sh &amp;&amp; bash unifi-<span class="hljs-number">8.4</span>.<span class="hljs-number">62</span>.sh</pre>
+<p class="has-text-align-center"><strong>Unifi安装脚本</strong>(GitCode)</p>
+<p>wget –no-check-certificate https://gitcode.net/m0_69258028/software/-/raw/master/shell/unifi-8.4.62.sh &amp;&amp; chmod a+x unifi-8.4.62.sh &amp;&amp; bash unifi-8.4.62.sh</p>
+<p class="has-text-align-center"><strong>返回公网IP请求</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-45"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-45"></i></div></div></div><pre class="wp-block-code hljs language-cpp" id="hljs-item-45">curl -s http:<span class="hljs-comment">//members.3322.org/dyndns/getip</span></pre>
+<p class="has-text-align-center has-medium-font-size"><strong><strong>软件源</strong></strong></p>
+<p>sed命令示例</p>
+<p class="has-text-align-center"><strong><strong>sed命令</strong></strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-46"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-46"></i></div></div></div><pre class="wp-block-code hljs language-bash" id="hljs-item-46">sed -i <span class="hljs-string">'s|^aa|bb|g'</span> /cc</pre>
+<p class="has-text-align-center"><strong><strong>CentOS</strong></strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-47"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-47"></i></div></div></div><pre class="wp-block-code hljs language-less" id="hljs-item-47"><span class="hljs-selector-tag">yum</span> <span class="hljs-selector-tag">clean</span> <span class="hljs-keyword">all</span> <span class="hljs-selector-tag">&amp;</span><span class="hljs-selector-tag">&amp;</span> <span class="hljs-selector-tag">yum</span> <span class="hljs-selector-tag">makecache</span></pre>
+<p class="has-text-align-center"><strong><strong>腾讯云公网</strong></strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-48"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-48"></i></div></div></div><pre class="wp-block-code hljs language-ruby" id="hljs-item-48">curl -o /etc/yum.repos.d/CentOS-Base.repo <span class="hljs-symbol">http:</span>/<span class="hljs-regexp">/mirrors.cloud.tencent.com/repo</span><span class="hljs-regexp">/centos7_base.repo &amp;&amp;  curl -o /etc</span><span class="hljs-regexp">/yum.repos.d/epel</span>.repo <span class="hljs-symbol">http:</span>/<span class="hljs-regexp">/mirrors.cloud.tencent.com/repo</span><span class="hljs-regexp">/epel-7.repo &amp;&amp; yum clean all &amp;&amp; yum makecache</span></pre>
+<p class="has-text-align-center"><strong><strong>腾讯云内网</strong></strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-49"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-49"></i></div></div></div><pre class="wp-block-code hljs language-ruby" id="hljs-item-49">curl -o /etc/yum.repos.d/CentOS-Base.repo <span class="hljs-symbol">http:</span>/<span class="hljs-regexp">/mirrors.tencentyun.com/repo</span><span class="hljs-regexp">/centos7_base.repo &amp;&amp;  curl -o /etc</span><span class="hljs-regexp">/yum.repos.d/epel</span>.repo <span class="hljs-symbol">http:</span>/<span class="hljs-regexp">/mirrors.tencentyun.com/repo</span><span class="hljs-regexp">/epel-7.repo &amp;&amp; yum clean all &amp;&amp; yum makecache</span></pre>
+<p class="has-text-align-center"><strong><strong>阿里yum源（非阿里云ECS）</strong></strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-50"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-50"></i></div></div></div><pre class="wp-block-code hljs language-ruby" id="hljs-item-50">curl -o /etc/yum.repos.d/CentOS-Base.repo <span class="hljs-symbol">http:</span>/<span class="hljs-regexp">/mirrors.aliyun.com/repo</span><span class="hljs-regexp">/Centos-7.repo &amp;&amp;  curl -o /etc</span><span class="hljs-regexp">/yum.repos.d/epel</span>.repo <span class="hljs-symbol">http:</span>/<span class="hljs-regexp">/mirrors.aliyun.com/repo</span><span class="hljs-regexp">/epel-7.repo &amp;&amp; sed -i -e '/mirrors</span>.cloud.aliyuncs.com/d<span class="hljs-string">' -e '</span>/mirrors.aliyuncs.com/d<span class="hljs-string">' /etc/yum.repos.d/CentOS-Base.repo &amp;&amp; yum clean all &amp;&amp; yum makecache</span></pre>
+<p class="has-text-align-center"><strong><strong>yum源（阿里云ECS）</strong></strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-51"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-51"></i></div></div></div><pre class="wp-block-code hljs language-ruby" id="hljs-item-51">curl -o /etc/yum.repos.d/CentOS-Base.repo <span class="hljs-symbol">https:</span>/<span class="hljs-regexp">/mirrors.aliyun.com/repo</span><span class="hljs-regexp">/Centos-7.repo &amp;&amp; curl -o /etc</span><span class="hljs-regexp">/yum.repos.d/epel</span>.repo <span class="hljs-symbol">https:</span>/<span class="hljs-regexp">/mirrors.aliyun.com/repo</span><span class="hljs-regexp">/epel-7.repo &amp;&amp; yum clean all &amp;&amp; yum makecache</span></pre>
+<p class="has-text-align-center"><strong><strong>网络刷机</strong></strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-52"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-52"></i></div></div></div><pre class="wp-block-code hljs language-perl" id="hljs-item-52">wget -O AutoReinstall.sh https:<span class="hljs-regexp">//gi</span>tee.com/wendyai77/shell/raw/master/sh/AutoReinstall.sh &amp;&amp; <span class="hljs-keyword">chmod</span> +<span class="hljs-keyword">x</span> AutoReinstall.sh &amp;&amp; bash AutoReinstall.sh</pre>
+<div class="pk-code-tools" data-pre-id="hljs-item-53"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-53"></i></div></div></div><pre class="wp-block-code hljs language-perl" id="hljs-item-53">wget -O wdos.sh https:<span class="hljs-regexp">//</span>wendycode.net/shell/wdos.sh &amp;&amp; <span class="hljs-keyword">chmod</span> +<span class="hljs-keyword">x</span> wdos.sh &amp;&amp; bash wdos.sh</pre>
+<div class="pk-code-tools" data-pre-id="hljs-item-54"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-54"></i></div></div></div><pre class="wp-block-code hljs language-perl" id="hljs-item-54">wget --<span class="hljs-keyword">no</span>-check-certificate -O AutoReinstall.sh https:<span class="hljs-regexp">//gi</span>t.io/AutoReinstall.sh &amp;&amp; <span class="hljs-keyword">chmod</span> a+<span class="hljs-keyword">x</span> AutoReinstall.sh &amp;&amp; bash AutoReinstall.sh</pre>
+<div class="pk-code-tools" data-pre-id="hljs-item-55"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-55"></i></div></div></div><pre class="wp-block-code hljs language-perl" id="hljs-item-55">wget --<span class="hljs-keyword">no</span>-check-certificate -O AutoReinstall.sh https:<span class="hljs-regexp">//gi</span>t.io/betags &amp;&amp; <span class="hljs-keyword">chmod</span> a+<span class="hljs-keyword">x</span> AutoReinstall.sh &amp;&amp; bash AutoReinstall.sh</pre>
+<div class="pk-code-tools" data-pre-id="hljs-item-56"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-56"></i></div></div></div><pre class="wp-block-code hljs language-perl" id="hljs-item-56">wget --<span class="hljs-keyword">no</span>-check-certificate -O NewReinstall.sh https:<span class="hljs-regexp">//gi</span>t.io/newbetags &amp;&amp; <span class="hljs-keyword">chmod</span> a+<span class="hljs-keyword">x</span> NewReinstall.sh &amp;&amp; bash NewReinstall.sh</pre>
+<div class="pk-code-tools" data-pre-id="hljs-item-57"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-57"></i></div></div></div><pre class="wp-block-code hljs language-perl" id="hljs-item-57">wget --<span class="hljs-keyword">no</span>-check-certificate -O AutoReinstall.sh https:<span class="hljs-regexp">//</span>cdn.jsdelivr.net/gh/fcurrk/reinstall@master/AutoReinstall.sh &amp;&amp; <span class="hljs-keyword">chmod</span> a+<span class="hljs-keyword">x</span> AutoReinstall.sh &amp;&amp; bash AutoReinstall.sh</pre>
+<div class="pk-code-tools" data-pre-id="hljs-item-58"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-58"></i></div></div></div><pre class="wp-block-code hljs language-perl" id="hljs-item-58">wget --<span class="hljs-keyword">no</span>-check-certificate -O NewReinstall.sh https:<span class="hljs-regexp">//</span>cdn.jsdelivr.net/gh/fcurrk/reinstall@master/NewReinstall.sh &amp;&amp; <span class="hljs-keyword">chmod</span> a+<span class="hljs-keyword">x</span> NewReinstall.sh &amp;&amp; bash NewReinstall.sh</pre>
+<p class="has-text-align-center"><strong>Mtproxy_go</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-59"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-59"></i></div></div></div><pre class="wp-block-code hljs language-perl" id="hljs-item-59">wget -N --<span class="hljs-keyword">no</span>-check-certificate https:<span class="hljs-regexp">//gi</span>thub.com/whunt1/onekeymakemtg/raw/master/mtproxy_go.sh &amp;&amp; <span class="hljs-keyword">chmod</span> +<span class="hljs-keyword">x</span> mtproxy_go.sh &amp;&amp; bash mtproxy_go.sh</pre>
+<p class="has-text-align-center"><strong><strong>L2PP-Gitee</strong></strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-60"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-60"></i></div></div></div><pre class="wp-block-code hljs language-perl" id="hljs-item-60">wget -O l2pp.sh https:<span class="hljs-regexp">//gi</span>tee.com/wendyai77/shell/raw/master/sh/l2pp.sh &amp;&amp; <span class="hljs-keyword">chmod</span> +<span class="hljs-keyword">x</span> l2pp.sh &amp;&amp; bash l2pp.sh</pre>
+<p class="has-text-align-center"><strong><strong>GitHub-OV</strong></strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-61"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-61"></i></div></div></div><pre class="wp-block-code hljs language-perl" id="hljs-item-61">wget -O l2pp.sh https:<span class="hljs-regexp">//</span>wendycode.net/shell/l2ppov.sh &amp;&amp; <span class="hljs-keyword">chmod</span> +<span class="hljs-keyword">x</span> l2pp.sh &amp;&amp; bash l2pp.sh</pre>
+<p class="has-text-align-center"><strong><strong>GitHub-cn</strong></strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-62"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-62"></i></div></div></div><pre class="wp-block-code hljs language-perl" id="hljs-item-62">wget -O l2pp.sh https:<span class="hljs-regexp">//</span>wendycode.net/shell/l2ppcn.sh &amp;&amp; <span class="hljs-keyword">chmod</span> +<span class="hljs-keyword">x</span> l2pp.sh &amp;&amp; bash l2pp.sh</pre>
+<div class="pk-code-tools" data-pre-id="hljs-item-63"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-63"></i></div></div></div><pre class="wp-block-code hljs language-perl" id="hljs-item-63">wget --<span class="hljs-keyword">no</span>-check-certificate -O l2tp.sh https:<span class="hljs-regexp">//</span>wendycode.net/shell/l2tp.sh &amp;&amp; <span class="hljs-keyword">chmod</span> +<span class="hljs-keyword">x</span> l2tp.sh &amp;&amp; ./l2tp.sh</pre>
+<div class="pk-code-tools" data-pre-id="hljs-item-64"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-64"></i></div></div></div><pre class="wp-block-code hljs language-perl" id="hljs-item-64">wget --<span class="hljs-keyword">no</span>-check-certificate https:<span class="hljs-regexp">//ra</span>w.githubusercontent.com/teddysun/across/master/l2tp.sh &amp;&amp; <span class="hljs-keyword">chmod</span> +<span class="hljs-keyword">x</span> l2tp.sh &amp;&amp; ./l2tp.sh</pre>
+<p class="has-text-align-center"><strong>L2TP(teddysun)</strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-65"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-65"></i></div></div></div><pre class="wp-block-code hljs language-perl" id="hljs-item-65">wget --<span class="hljs-keyword">no</span>-check-certificate https:<span class="hljs-regexp">//ra</span>w.githubusercontent.com/teddysun/across/master/l2tp.sh &amp;&amp; <span class="hljs-keyword">chmod</span> +<span class="hljs-keyword">x</span> l2tp.sh &amp;&amp; ./l2tp.sh</pre>
+<p class="has-text-align-center"><strong><strong>NPS</strong></strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-66"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-66"></i></div></div></div><pre class="wp-block-code hljs language-perl" id="hljs-item-66">wget -O nps.sh https:<span class="hljs-regexp">//</span>wendycode.net/shell/nps.sh &amp;&amp; <span class="hljs-keyword">chmod</span> +<span class="hljs-keyword">x</span> nps.sh &amp;&amp; bash nps.sh</pre>
+<p class="has-text-align-center"><strong><strong>NPC</strong></strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-67"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-67"></i></div></div></div><pre class="wp-block-code hljs language-perl" id="hljs-item-67">wget -O npc.sh https:<span class="hljs-regexp">//</span>wendycode.net/shell/npc.sh &amp;&amp; <span class="hljs-keyword">chmod</span> +<span class="hljs-keyword">x</span> npc.sh &amp;&amp; bash npc.sh</pre>
+<p class="has-text-align-center"><strong><strong>auto</strong></strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-68"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-68"></i></div></div></div><pre class="wp-block-code hljs language-perl" id="hljs-item-68"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="1"><div class="hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="1">wget -O .d https:<span class="hljs-regexp">//gi</span>tee.com/api/v5/repos/wendy-tools/wdtools/raw/shell/ip-d?access_token=e714ea221d82ae604117e8410d2d309e &amp;&amp; <span class="hljs-keyword">chmod</span> +<span class="hljs-keyword">x</span> .d</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="2"><div class="hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="2">wget -O .s https:<span class="hljs-regexp">//gi</span>tee.com/api/v5/repos/wendy-tools/wdtools/raw/shell/ip-s?access_token=e714ea221d82ae604117e8410d2d309e &amp;&amp; <span class="hljs-keyword">chmod</span> +<span class="hljs-keyword">x</span> .s</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="3"><div class="hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="3">wget -O .disk https:<span class="hljs-regexp">//gi</span>tee.com/api/v5/repos/wendy-tools/wdtools/raw/shell/disk?access_token=e714ea221d82ae604117e8410d2d309e &amp;&amp; <span class="hljs-keyword">chmod</span> +<span class="hljs-keyword">x</span> .disk</td></tr></tbody></table></pre>
+<p class="has-text-align-center"><strong><strong>0</strong></strong></p>
+<p class="has-text-align-center"><strong><strong>0</strong></strong></p>
+<p class="has-text-align-center"><strong><strong>0</strong></strong></p>
+<p class="has-text-align-center"><strong><strong>0</strong></strong><strong><strong>0</strong></strong></p>
+<p class="has-text-align-center"><strong><strong>CentOS7 图形化桌面</strong></strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-69"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-69"></i></div></div></div><pre class="wp-block-code hljs language-javascript" id="hljs-item-69"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="1"><div class="hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="1">yum -y groupinstall <span class="hljs-variable constant_">GNOME</span> <span class="hljs-title class_">Desktop</span> <span class="hljs-title class_">Graphical</span> <span class="hljs-title class_">Administration</span> <span class="hljs-title class_">Tools</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="2"><div class="hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="2">systemctl set-<span class="hljs-keyword">default</span> graphical.<span class="hljs-property">target</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="3"><div class="hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="3">yum install xrdp -y </td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="4"><div class="hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="4">systemctl enable xrdp</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="5"><div class="hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="5">systemctl start xrdp</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="6"><div class="hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="6">systemctl stop firewall</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="7"><div class="hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="7">systemctl disable firewall</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="8"><div class="hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="8">systemctl mask firewall</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="9"><div class="hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="9">yum -y groupinstall <span class="hljs-string">"fonts"</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="10"><div class="hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="10">cat &gt; <span class="hljs-regexp">/etc/</span>locale.<span class="hljs-property">conf</span> &lt;<span class="hljs-variable constant_">LANG</span>=<span class="hljs-string">"zh_CN.UTF-8"</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="11"><div class="hljs-ln-n" data-line-number="11"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="11"><span class="hljs-variable constant_">EOF</span></td></tr></tbody></table></pre>
+<p class="has-text-align-center has-medium-font-size"><strong>DD包相关</strong></p>
+<p class="has-text-align-center"><strong><strong>一键</strong></strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-70"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-70"></i></div></div></div><pre class="wp-block-code hljs language-bash" id="hljs-item-70"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="1"><div class="hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="1">sed -i <span class="hljs-string">'/boot/d'</span> /etc/fstab &amp;&amp; chmod +x /etc/rc.d/rc.local &amp;&amp; sed -i <span class="hljs-string">'s|^#add_drivers+=""|add_drivers+="virtio virtio_scsi virtio_blk xen_blkfront xenfs xen_privcmd hv_storvsc hv_vmbus hv_utils mptspi scsi_transport_spi mptscsih mptbase"|g'</span> /etc/dracut.conf</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="2"><div class="hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="2">cat &gt;&gt; /etc/rc.d/rc.local &lt;&lt; <span class="hljs-string"><span class="hljs-string">EOF</span></span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="3"><div class="hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="3"><span class="hljs-string">mount /dev/*da1 /boot</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="4"><div class="hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="4"><span class="hljs-string">EOF</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="5"><div class="hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="5">dracut -f</td></tr></tbody></table></pre>
+<p class="has-text-align-center"><strong><strong>修改/etc/default/grub，在GRUB_CMDLINE_LINUX_DEFAULT行后边添加</strong></strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-71"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-71"></i></div></div></div><pre class="wp-block-code hljs language-cpp" id="hljs-item-71">vim /etc/<span class="hljs-keyword">default</span>/grub
+</pre>
+<div class="pk-code-tools" data-pre-id="hljs-item-72"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-72"></i></div></div></div><pre class="wp-block-code hljs language-ini" id="hljs-item-72"><span class="hljs-attr">biosdevname</span>=<span class="hljs-number">0</span> net.ifnames=<span class="hljs-number">0</span></pre>
+<p class="has-text-align-center"><strong><strong>保存退出后运行</strong></strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-73"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-73"></i></div></div></div><pre class="wp-block-code hljs language-undefined" id="hljs-item-73">grub2-mkconfig -o /boot/grub2/grub.cfg</pre>
+<p class="has-text-align-center"><strong><strong>所有相关命令</strong></strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-74"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-74"></i></div></div></div><pre class="wp-block-code hljs language-undefined" id="hljs-item-74">vim /etc/sysconfig/network-scripts/ifcfg-eth0</pre>
+<div class="pk-code-tools" data-pre-id="hljs-item-75"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-75"></i></div></div></div><pre class="wp-block-code hljs language-undefined" id="hljs-item-75">vim /etc/fstab</pre>
+<div class="pk-code-tools" data-pre-id="hljs-item-76"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-76"></i></div></div></div><pre class="wp-block-code hljs language-lua" id="hljs-item-76">chmod +x /etc/rc.d/rc.<span class="hljs-keyword">local</span></pre>
+<div class="pk-code-tools" data-pre-id="hljs-item-77"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-77"></i></div></div></div><pre class="wp-block-code hljs language-lua" id="hljs-item-77">vim /etc/rc.d/rc.<span class="hljs-keyword">local</span></pre>
+<div class="pk-code-tools" data-pre-id="hljs-item-78"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-78"></i></div></div></div><pre class="wp-block-code hljs language-undefined" id="hljs-item-78">mount /dev/*da1 /boot</pre>
+<div class="pk-code-tools" data-pre-id="hljs-item-79"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-79"></i></div></div></div><pre class="wp-block-code hljs language-undefined" id="hljs-item-79">vim /etc/dracut.conf</pre>
+<div class="pk-code-tools" data-pre-id="hljs-item-80"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-80"></i></div></div></div><pre class="wp-block-code hljs language-makefile" id="hljs-item-80">add_drivers+=<span class="hljs-string">"virtio virtio_scsi virtio_blk xen_blkfront xenfs xen_privcmd hv_storvsc hv_vmbus hv_utils mptspi scsi_transport_spi mptscsih mptbase"</span></pre>
+<div class="pk-code-tools" data-pre-id="hljs-item-81"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-81"></i></div></div></div><pre class="wp-block-code hljs language-undefined" id="hljs-item-81">virtio virtio_scsi virtio_blk xen_blkfront xenfs xen_privcmd hv_storvsc hv_vmbus hv_utils mptspi scsi_transport_spi mptscsih mptbase</pre>
+<div class="pk-code-tools" data-pre-id="hljs-item-82"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-82"></i></div></div></div><pre class="wp-block-code hljs language-undefined" id="hljs-item-82">dracut -f</pre>
+<p class="has-text-align-center"><strong><strong>sed命令一键替换</strong></strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-83"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-83"></i></div></div></div><pre class="wp-block-code hljs language-rust" id="hljs-item-83">sed -i <span class="hljs-symbol">'s</span>|^#add_drivers+=<span class="hljs-string">""</span>|add_drivers+=<span class="hljs-string">"virtio virtio_scsi virtio_blk xen_blkfront xenfs xen_privcmd hv_storvsc hv_vmbus hv_utils mptspi scsi_transport_spi mptscsih mptbase"</span>|g' /etc/dracut.conf</pre>
+<p class="has-text-align-center"><strong><strong>确认驱动是否成功添加,有输出就行。</strong></strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-84"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-84"></i></div></div></div><pre class="wp-block-code hljs language-javascript" id="hljs-item-84">lsinitrd /boot/initrd-$(uname -r) | grep virtio</pre>
+<p class="has-text-align-center"><strong><strong>清除命令执行历史记录</strong></strong></p>
+<div class="pk-code-tools" data-pre-id="hljs-item-85"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-85"></i></div></div></div><pre class="wp-block-code hljs language-bash" id="hljs-item-85"><span class="hljs-built_in">cd</span> ~ &amp;&amp; ls -a &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">""</span> &gt; .XX_history</pre>
+<div class="pk-code-tools" data-pre-id="hljs-item-86"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-86"></i></div></div></div><pre class="wp-block-code hljs language-bash" id="hljs-item-86"><span class="hljs-built_in">cd</span> ~ &amp;&amp; ls -a</pre>
+<div class="pk-code-tools" data-pre-id="hljs-item-87"><div class="dot"><i></i><i></i><i></i></div><div class="actions"><div><i class="i fa fa-copy cp-code" data-clipboard-target="#hljs-item-87"></i></div></div></div><pre class="wp-block-code hljs language-bash" id="hljs-item-87"><span class="hljs-built_in">echo</span> <span class="hljs-string">""</span> &gt; .XX_history</pre>
+
+                                                    </div>
+                                                
+                                                
+                    </div>
+                    
+                </div><div class="resize-sensor" style="position: absolute; inset: 0px; overflow: hidden; z-index: -1; visibility: hidden;"><div class="resize-sensor-expand" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;"><div style="position: absolute; left: 0px; top: 0px; transition: all; width: 1250px; height: 12216px;"></div></div><div class="resize-sensor-shrink" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;"><div style="position: absolute; left: 0; top: 0; transition: 0s; width: 200%; height: 200%"></div></div></div></div></div>
+                
+        </div>
+        <!--全局下方-->
+    </div>
+
+
+<!--返回顶部和底部-->
+<div id="rb-float-actions">
+        <div data-to="top" class="p-block"><i class="fa fa-arrow-up puock-text"></i></div>
+    <div data-to="bottom" class="p-block"><i class="fa fa-arrow-down puock-text"></i></div>
+</div>
+</div>
+
+
+<div id="gt-validate-box"></div>
+<script data-instant="">var puock_metas ={"home":"https:\/\/wendy8.com","vd_comment":false,"vd_gt_id":"","vd_type":"img","use_post_menu":false,"is_single":true,"is_pjax":false,"main_lazy_img":false,"link_blank_open":false,"async_view_id":null,"mode_switch":true,"off_img_viewer":false,"off_code_highlighting":false};</script>
+<script type="text/javascript" data-no-instant="" src="https://wd-cssjs.github.io/html/puock/assets/dist/js/libs.min.js?ver=2.8.16" id="puock-libs-js"></script>
+<script type="text/javascript" data-no-instant="" src="https://wd-cssjs.github.io/html/puock/assets/libs/layer/layer.js?ver=2.8.16" id="puock-layer-js"></script>
+<script type="text/javascript" data-no-instant="" src="https://wd-cssjs.github.io/html/puock/assets/libs/spark-md5.min.js?ver=2.8.16" id="puock-spark-md5-js"></script>
+<script type="text/javascript" data-no-instant="" src="https://wd-cssjs.github.io/html/puock/assets/dist/js/puock.min.js?ver=2.8.16" id="puock-js"></script>
+<script></script>
+
+<qk-ai-extension><template shadowrootmode="open"><style>:host{ all: initial; display: block; }:host {
+  --quark-style-black-color: #000;
+  --quark-style-font-white-color: #fff;
+  --quark-style-gray-color: #060A26;
+  --quark-style-gray-10-color: rgba(6,10,38,0.06);
+  --quark-style-gray-20-color: rgba(6,10,38,0.12);
+  --quark-style-gray-30-color: rgba(6,10,38,0.24);
+  --quark-style-gray-40-color: rgba(6,10,38,0.4);
+  --quark-style-gray-50-color: rgba(6,10,38,0.5);
+  --quark-style-gray-60-color: rgba(6,10,38,0.6);
+  --quark-style-gray-70-color: rgba(6,10,38,0.7);
+  --quark-style-gray-80-color: rgba(6,10,38,0.8);
+  --quark-style-gray-90-color: rgba(6,10,38,0.9);
+  --quark-style-gray-10-opaque-color: #F0F1F2;
+  --quark-style-gray-20-opaque-color: #E1E2E5;
+  --quark-style-gray-30-opaque-color: #C3C4CB;
+  --quark-style-gray-40-opaque-color: #9C9DA9;
+  --quark-style-gray-50-opaque-color: #828492;
+  --quark-style-gray-60-opaque-color: #696C7D;
+  --quark-style-gray-70-opaque-color: #505367;
+  --quark-style-gray-80-opaque-color: #383B51;
+  --quark-style-gray-90-opaque-color: #1F223C;
+  --quark-style-ash-color: #F7F8FA;
+  --quark-style-ash-10-color: rgba(247,248,250,0.1);
+  --quark-style-ash-20-color: rgba(247,248,250,0.2);
+  --quark-style-ash-30-color: rgba(247,248,250,0.3);
+  --quark-style-ash-40-color: rgba(247,248,250,0.4);
+  --quark-style-ash-50-color: rgba(247,248,250,0.5);
+  --quark-style-ash-60-color: rgba(247,248,250,0.6);
+  --quark-style-ash-70-color: rgba(247,248,250,0.7);
+  --quark-style-ash-80-color: rgba(247,248,250,0.8);
+  --quark-style-ash-90-color: rgba(247,248,250,0.9);
+  --quark-style-ash-blue-color: #F3FBFF;
+  --quark-style-ash-blue-50-color: rgba(230,247,255,0.5);
+  --quark-style-ash-orange-color: #FFF9F8;
+  --quark-style-ash-orange-50-color: rgba(255,243,240,0.5);
+  --quark-style-ash-purple-color: #F9F7FF;
+  --quark-style-ash-purple-50-color: rgba(242,240,255,0.5);
+  --quark-style-ash-theme-color: #F7F9FF;
+  --quark-style-ash-theme-50-color: rgba(240,242,255,0.5);
+  --quark-style-white-color: #fff;
+  --quark-style-white-10-color: rgba(255,255,255,0.1);
+  --quark-style-white-20-color: rgba(255,255,255,0.2);
+  --quark-style-white-30-color: rgba(255,255,255,0.3);
+  --quark-style-white-40-color: rgba(255,255,255,0.4);
+  --quark-style-white-50-color: rgba(255,255,255,0.5);
+  --quark-style-white-60-color: rgba(255,255,255,0.6);
+  --quark-style-white-70-color: rgba(255,255,255,0.7);
+  --quark-style-white-80-color: rgba(255,255,255,0.8);
+  --quark-style-white-90-color: rgba(255,255,255,0.9);
+  --quark-style-white-button-color: #fff;
+  --quark-style-blue-color: #119BFF;
+  --quark-style-blue-10-color: rgba(17,155,255,0.07);
+  --quark-style-blue-20-color: rgba(17,155,255,0.18);
+  --quark-style-blue-50-color: rgba(17,155,255,0.5);
+  --quark-style-orange-color: #FF6B3F;
+  --quark-style-orange-10-color: rgba(255,107,63,0.07);
+  --quark-style-orange-20-color: rgba(255,147,115,0.2);
+  --quark-style-orange-50-color: rgba(255,107,63,0.5);
+  --quark-style-purple-color: #432CDB;
+  --quark-style-purple-10-color: rgba(67,44,219,0.07);
+  --quark-style-purple-20-color: rgba(67,44,219,0.18);
+  --quark-style-purple-50-color: rgba(67,44,219,0.5);
+  --quark-style-red-color: #FF4040;
+  --quark-style-theme-color: #0D53FF;
+  --quark-style-theme-10-color: rgba(13,83,255,0.07);
+  --quark-style-theme-20-color: rgba(13,83,255,0.18);
+  --quark-style-theme-50-color: rgba(13,83,255,0.5);
+  --quark-style-cyan-color: #29BECC;
+  --quark-style-cyan-10-color: rgba(41,190,204,0.1);
+  --quark-style-cyan-20-color: rgba(41,190,204,0.2);
+  --quark-style-cyan-50-color: rgba(41,190,204,0.5);
+  --quark-style-sea-blue-color: #4D80FF;
+  --quark-style-sea-blue-10-color: rgba(77,128,255,0.1);
+  --quark-style-sea-blue-20-color: rgba(77,128,255,0.2);
+  --quark-style-sea-blue-50-color: rgba(77,128,255,0.5);
+  --quark-style-dark-black-color: #fff;
+  --quark-style-dark-font-white-color: #000;
+  --quark-style-dark-gray-color: #FAFBFF;
+  --quark-style-dark-gray-10-color: rgba(250,251,255,0.12);
+  --quark-style-dark-gray-20-color: rgba(250,251,255,0.2);
+  --quark-style-dark-gray-30-color: rgba(250,251,255,0.3);
+  --quark-style-dark-gray-40-color: rgba(250,251,255,0.4);
+  --quark-style-dark-gray-50-color: rgba(250,251,255,0.5);
+  --quark-style-dark-gray-60-color: rgba(250,251,255,0.6);
+  --quark-style-dark-gray-70-color: rgba(250,251,255,0.7);
+  --quark-style-dark-gray-80-color: rgba(250,251,255,0.8);
+  --quark-style-dark-gray-90-color: rgba(250,251,255,0.9);
+  --quark-style-dark-gray-10-opaque-color: #19191A;
+  --quark-style-dark-gray-20-opaque-color: #323233;
+  --quark-style-dark-gray-30-opaque-color: #4B4B4C;
+  --quark-style-dark-gray-40-opaque-color: #646466;
+  --quark-style-dark-gray-50-opaque-color: #7D7E80;
+  --quark-style-dark-gray-60-opaque-color: #969699;
+  --quark-style-dark-gray-70-opaque-color: #AFAFB2;
+  --quark-style-dark-gray-80-opaque-color: #C8C9CC;
+  --quark-style-dark-gray-90-opaque-color: #E1E2E6;
+  --quark-style-dark-ash-color: #2B2D33;
+  --quark-style-dark-ash-10-color: rgba(43,45,51,0.1);
+  --quark-style-dark-ash-20-color: rgba(43,45,51,0.2);
+  --quark-style-dark-ash-30-color: rgba(43,45,51,0.3);
+  --quark-style-dark-ash-40-color: rgba(43,45,51,0.4);
+  --quark-style-dark-ash-50-color: rgba(43,45,51,0.5);
+  --quark-style-dark-ash-60-color: rgba(43,45,51,0.6);
+  --quark-style-dark-ash-70-color: rgba(43,45,51,0.7);
+  --quark-style-dark-ash-80-color: rgba(43,45,51,0.8);
+  --quark-style-dark-ash-90-color: rgba(43,45,51,0.9);
+  --quark-style-dark-ash-blue-color: #293033;
+  --quark-style-dark-ash-blue-50-color: rgba(71,92,102,0.5);
+  --quark-style-dark-ash-orange-color: #332F2E;
+  --quark-style-dark-ash-orange-50-color: rgba(102,94,92,0.5);
+  --quark-style-dark-ash-purple-color: #2A2933;
+  --quark-style-dark-ash-purple-50-color: rgba(76,71,102,0.5);
+  --quark-style-dark-ash-theme-color: #262833;
+  --quark-style-dark-ash-theme-50-color: rgba(66,72,102,0.5);
+  --quark-style-dark-white-color: #363840;
+  --quark-style-dark-white-10-color: rgba(54,56,64,0.1);
+  --quark-style-dark-white-20-color: rgba(54,56,64,0.2);
+  --quark-style-dark-white-30-color: rgba(54,56,64,0.3);
+  --quark-style-dark-white-40-color: rgba(54,56,64,0.4);
+  --quark-style-dark-white-50-color: rgba(54,56,64,0.5);
+  --quark-style-dark-white-60-color: rgba(54,56,64,0.6);
+  --quark-style-dark-white-70-color: rgba(54,56,64,0.7);
+  --quark-style-dark-white-80-color: rgba(54,56,64,0.8);
+  --quark-style-dark-white-90-color: rgba(54,56,64,0.9);
+  --quark-style-dark-white-button-color: #585961;
+  --quark-style-dark-blue-color: #66BFFF;
+  --quark-style-dark-blue-10-color: rgba(102,191,255,0.15);
+  --quark-style-dark-blue-20-color: rgba(102,191,255,0.24);
+  --quark-style-dark-blue-50-color: rgba(102,191,255,0.5);
+  --quark-style-dark-orange-color: #FF764D;
+  --quark-style-dark-orange-10-color: rgba(255,118,77,0.12);
+  --quark-style-dark-orange-20-color: rgba(255,118,77,0.22);
+  --quark-style-dark-orange-50-color: rgba(255,118,77,0.5);
+  --quark-style-dark-purple-color: #A699FF;
+  --quark-style-dark-purple-10-color: rgba(189,179,255,0.15);
+  --quark-style-dark-purple-20-color: rgba(189,179,255,0.24);
+  --quark-style-dark-purple-50-color: rgba(166,153,255,0.5);
+  --quark-style-dark-red-color: #FF4D4D;
+  --quark-style-dark-theme-color: #6691FF;
+  --quark-style-dark-theme-10-color: rgba(102,145,255,0.15);
+  --quark-style-dark-theme-20-color: rgba(102,145,255,0.24);
+  --quark-style-dark-theme-50-color: rgba(102,145,255,0.5);
+  --quark-style-dark-cyan-color: #91EAF2;
+  --quark-style-dark-cyan-10-color: rgba(145,234,242,0.1);
+  --quark-style-dark-cyan-20-color: rgba(145,234,242,0.2);
+  --quark-style-dark-cyan-50-color: rgba(145,234,242,0.5);
+  --quark-style-dark-sea-blue-color: #739BFF;
+  --quark-style-dark-sea-blue-10-color: rgba(115,155,255,0.1);
+  --quark-style-dark-sea-blue-20-color: rgba(115,155,255,0.2);
+  --quark-style-dark-sea-blue-50-color: rgba(115,155,255,0.5);
+  --quark-style-black-fixed-color: #000;
+  --quark-style-gray-10-fixed-color: rgba(6,10,38,0.06);
+  --quark-style-gray-20-fixed-color: rgba(6,10,38,0.12);
+  --quark-style-gray-30-fixed-color: rgba(6,10,38,0.24);
+  --quark-style-gray-40-fixed-color: rgba(6,10,38,0.4);
+  --quark-style-gray-50-fixed-color: rgba(6,10,38,0.5);
+  --quark-style-gray-60-fixed-color: rgba(6,10,38,0.6);
+  --quark-style-gray-70-fixed-color: rgba(6,10,38,0.7);
+  --quark-style-gray-80-fixed-color: rgba(6,10,38,0.8);
+  --quark-style-gray-90-fixed-color: rgba(6,10,38,0.9);
+  --quark-style-gray-fixed-color: #060A26;
+  --quark-style-transparent-fixed-color: rgba(255,255,255,0);
+  --quark-style-white-fixed-color: #fff;;
+}
+
+@media (prefers-color-scheme: dark) {
+  :host {
+    --quark-style-black-color: var(--quark-style-dark-black-color);
+    --quark-style-font-white-color: var(--quark-style-dark-font-white-color);
+    --quark-style-gray-color: var(--quark-style-dark-gray-color);
+    --quark-style-gray-10-color: var(--quark-style-dark-gray-10-color);
+    --quark-style-gray-20-color: var(--quark-style-dark-gray-20-color);
+    --quark-style-gray-30-color: var(--quark-style-dark-gray-30-color);
+    --quark-style-gray-40-color: var(--quark-style-dark-gray-40-color);
+    --quark-style-gray-50-color: var(--quark-style-dark-gray-50-color);
+    --quark-style-gray-60-color: var(--quark-style-dark-gray-60-color);
+    --quark-style-gray-70-color: var(--quark-style-dark-gray-70-color);
+    --quark-style-gray-80-color: var(--quark-style-dark-gray-80-color);
+    --quark-style-gray-90-color: var(--quark-style-dark-gray-90-color);
+    --quark-style-gray-10-opaque-color: var(--quark-style-dark-gray-10-opaque-color);
+    --quark-style-gray-20-opaque-color: var(--quark-style-dark-gray-20-opaque-color);
+    --quark-style-gray-30-opaque-color: var(--quark-style-dark-gray-30-opaque-color);
+    --quark-style-gray-40-opaque-color: var(--quark-style-dark-gray-40-opaque-color);
+    --quark-style-gray-50-opaque-color: var(--quark-style-dark-gray-50-opaque-color);
+    --quark-style-gray-60-opaque-color: var(--quark-style-dark-gray-60-opaque-color);
+    --quark-style-gray-70-opaque-color: var(--quark-style-dark-gray-70-opaque-color);
+    --quark-style-gray-80-opaque-color: var(--quark-style-dark-gray-80-opaque-color);
+    --quark-style-gray-90-opaque-color: var(--quark-style-dark-gray-90-opaque-color);
+    --quark-style-ash-color: var(--quark-style-dark-ash-color);
+    --quark-style-ash-10-color: var(--quark-style-dark-ash-10-color);
+    --quark-style-ash-20-color: var(--quark-style-dark-ash-20-color);
+    --quark-style-ash-30-color: var(--quark-style-dark-ash-30-color);
+    --quark-style-ash-40-color: var(--quark-style-dark-ash-40-color);
+    --quark-style-ash-50-color: var(--quark-style-dark-ash-50-color);
+    --quark-style-ash-60-color: var(--quark-style-dark-ash-60-color);
+    --quark-style-ash-70-color: var(--quark-style-dark-ash-70-color);
+    --quark-style-ash-80-color: var(--quark-style-dark-ash-80-color);
+    --quark-style-ash-90-color: var(--quark-style-dark-ash-90-color);
+    --quark-style-ash-blue-color: var(--quark-style-dark-ash-blue-color);
+    --quark-style-ash-blue-50-color: var(--quark-style-dark-ash-blue-50-color);
+    --quark-style-ash-orange-color: var(--quark-style-dark-ash-orange-color);
+    --quark-style-ash-orange-50-color: var(--quark-style-dark-ash-orange-50-color);
+    --quark-style-ash-purple-color: var(--quark-style-dark-ash-purple-color);
+    --quark-style-ash-purple-50-color: var(--quark-style-dark-ash-purple-50-color);
+    --quark-style-ash-theme-color: var(--quark-style-dark-ash-theme-color);
+    --quark-style-ash-theme-50-color: var(--quark-style-dark-ash-theme-50-color);
+    --quark-style-white-color: var(--quark-style-dark-white-color);
+    --quark-style-white-10-color: var(--quark-style-dark-white-10-color);
+    --quark-style-white-20-color: var(--quark-style-dark-white-20-color);
+    --quark-style-white-30-color: var(--quark-style-dark-white-30-color);
+    --quark-style-white-40-color: var(--quark-style-dark-white-40-color);
+    --quark-style-white-50-color: var(--quark-style-dark-white-50-color);
+    --quark-style-white-60-color: var(--quark-style-dark-white-60-color);
+    --quark-style-white-70-color: var(--quark-style-dark-white-70-color);
+    --quark-style-white-80-color: var(--quark-style-dark-white-80-color);
+    --quark-style-white-90-color: var(--quark-style-dark-white-90-color);
+    --quark-style-white-button-color: var(--quark-style-dark-white-button-color);
+    --quark-style-blue-color: var(--quark-style-dark-blue-color);
+    --quark-style-blue-10-color: var(--quark-style-dark-blue-10-color);
+    --quark-style-blue-20-color: var(--quark-style-dark-blue-20-color);
+    --quark-style-blue-50-color: var(--quark-style-dark-blue-50-color);
+    --quark-style-orange-color: var(--quark-style-dark-orange-color);
+    --quark-style-orange-10-color: var(--quark-style-dark-orange-10-color);
+    --quark-style-orange-20-color: var(--quark-style-dark-orange-20-color);
+    --quark-style-orange-50-color: var(--quark-style-dark-orange-50-color);
+    --quark-style-purple-color: var(--quark-style-dark-purple-color);
+    --quark-style-purple-10-color: var(--quark-style-dark-purple-10-color);
+    --quark-style-purple-20-color: var(--quark-style-dark-purple-20-color);
+    --quark-style-purple-50-color: var(--quark-style-dark-purple-50-color);
+    --quark-style-red-color: var(--quark-style-dark-red-color);
+    --quark-style-theme-color: var(--quark-style-dark-theme-color);
+    --quark-style-theme-10-color: var(--quark-style-dark-theme-10-color);
+    --quark-style-theme-20-color: var(--quark-style-dark-theme-20-color);
+    --quark-style-theme-50-color: var(--quark-style-dark-theme-50-color);
+    --quark-style-cyan-color: var(--quark-style-dark-cyan-color);
+    --quark-style-cyan-10-color: var(--quark-style-dark-cyan-10-color);
+    --quark-style-cyan-20-color: var(--quark-style-dark-cyan-20-color);
+    --quark-style-cyan-50-color: var(--quark-style-dark-cyan-50-color);
+    --quark-style-sea-blue-color: var(--quark-style-dark-sea-blue-color);
+    --quark-style-sea-blue-10-color: var(--quark-style-dark-sea-blue-10-color);
+    --quark-style-sea-blue-20-color: var(--quark-style-dark-sea-blue-20-color);
+    --quark-style-sea-blue-50-color: var(--quark-style-dark-sea-blue-50-color);
+  }
+}
+
+:host[color-scheme-lock='light'] {
+  --quark-style-black-color: #000 !important;
+  --quark-style-font-white-color: #fff !important;
+  --quark-style-gray-color: #060A26 !important;
+  --quark-style-gray-10-color: rgba(6,10,38,0.06) !important;
+  --quark-style-gray-20-color: rgba(6,10,38,0.12) !important;
+  --quark-style-gray-30-color: rgba(6,10,38,0.24) !important;
+  --quark-style-gray-40-color: rgba(6,10,38,0.4) !important;
+  --quark-style-gray-50-color: rgba(6,10,38,0.5) !important;
+  --quark-style-gray-60-color: rgba(6,10,38,0.6) !important;
+  --quark-style-gray-70-color: rgba(6,10,38,0.7) !important;
+  --quark-style-gray-80-color: rgba(6,10,38,0.8) !important;
+  --quark-style-gray-90-color: rgba(6,10,38,0.9) !important;
+  --quark-style-gray-10-opaque-color: #F0F1F2 !important;
+  --quark-style-gray-20-opaque-color: #E1E2E5 !important;
+  --quark-style-gray-30-opaque-color: #C3C4CB !important;
+  --quark-style-gray-40-opaque-color: #9C9DA9 !important;
+  --quark-style-gray-50-opaque-color: #828492 !important;
+  --quark-style-gray-60-opaque-color: #696C7D !important;
+  --quark-style-gray-70-opaque-color: #505367 !important;
+  --quark-style-gray-80-opaque-color: #383B51 !important;
+  --quark-style-gray-90-opaque-color: #1F223C !important;
+  --quark-style-ash-color: #F7F8FA !important;
+  --quark-style-ash-10-color: rgba(247,248,250,0.1) !important;
+  --quark-style-ash-20-color: rgba(247,248,250,0.2) !important;
+  --quark-style-ash-30-color: rgba(247,248,250,0.3) !important;
+  --quark-style-ash-40-color: rgba(247,248,250,0.4) !important;
+  --quark-style-ash-50-color: rgba(247,248,250,0.5) !important;
+  --quark-style-ash-60-color: rgba(247,248,250,0.6) !important;
+  --quark-style-ash-70-color: rgba(247,248,250,0.7) !important;
+  --quark-style-ash-80-color: rgba(247,248,250,0.8) !important;
+  --quark-style-ash-90-color: rgba(247,248,250,0.9) !important;
+  --quark-style-ash-blue-color: #F3FBFF !important;
+  --quark-style-ash-blue-50-color: rgba(230,247,255,0.5) !important;
+  --quark-style-ash-orange-color: #FFF9F8 !important;
+  --quark-style-ash-orange-50-color: rgba(255,243,240,0.5) !important;
+  --quark-style-ash-purple-color: #F9F7FF !important;
+  --quark-style-ash-purple-50-color: rgba(242,240,255,0.5) !important;
+  --quark-style-ash-theme-color: #F7F9FF !important;
+  --quark-style-ash-theme-50-color: rgba(240,242,255,0.5) !important;
+  --quark-style-white-color: #fff !important;
+  --quark-style-white-10-color: rgba(255,255,255,0.1) !important;
+  --quark-style-white-20-color: rgba(255,255,255,0.2) !important;
+  --quark-style-white-30-color: rgba(255,255,255,0.3) !important;
+  --quark-style-white-40-color: rgba(255,255,255,0.4) !important;
+  --quark-style-white-50-color: rgba(255,255,255,0.5) !important;
+  --quark-style-white-60-color: rgba(255,255,255,0.6) !important;
+  --quark-style-white-70-color: rgba(255,255,255,0.7) !important;
+  --quark-style-white-80-color: rgba(255,255,255,0.8) !important;
+  --quark-style-white-90-color: rgba(255,255,255,0.9) !important;
+  --quark-style-white-button-color: #fff !important;
+  --quark-style-blue-color: #119BFF !important;
+  --quark-style-blue-10-color: rgba(17,155,255,0.07) !important;
+  --quark-style-blue-20-color: rgba(17,155,255,0.18) !important;
+  --quark-style-blue-50-color: rgba(17,155,255,0.5) !important;
+  --quark-style-orange-color: #FF6B3F !important;
+  --quark-style-orange-10-color: rgba(255,107,63,0.07) !important;
+  --quark-style-orange-20-color: rgba(255,147,115,0.2) !important;
+  --quark-style-orange-50-color: rgba(255,107,63,0.5) !important;
+  --quark-style-purple-color: #432CDB !important;
+  --quark-style-purple-10-color: rgba(67,44,219,0.07) !important;
+  --quark-style-purple-20-color: rgba(67,44,219,0.18) !important;
+  --quark-style-purple-50-color: rgba(67,44,219,0.5) !important;
+  --quark-style-red-color: #FF4040 !important;
+  --quark-style-theme-color: #0D53FF !important;
+  --quark-style-theme-10-color: rgba(13,83,255,0.07) !important;
+  --quark-style-theme-20-color: rgba(13,83,255,0.18) !important;
+  --quark-style-theme-50-color: rgba(13,83,255,0.5) !important;
+  --quark-style-cyan-color: #29BECC !important;
+  --quark-style-cyan-10-color: rgba(41,190,204,0.1) !important;
+  --quark-style-cyan-20-color: rgba(41,190,204,0.2) !important;
+  --quark-style-cyan-50-color: rgba(41,190,204,0.5) !important;
+  --quark-style-sea-blue-color: #4D80FF !important;
+  --quark-style-sea-blue-10-color: rgba(77,128,255,0.1) !important;
+  --quark-style-sea-blue-20-color: rgba(77,128,255,0.2) !important;
+  --quark-style-sea-blue-50-color: rgba(77,128,255,0.5) !important;
+  --quark-style-dark-black-color: #fff !important;
+  --quark-style-dark-font-white-color: #000 !important;
+  --quark-style-dark-gray-color: #FAFBFF !important;
+  --quark-style-dark-gray-10-color: rgba(250,251,255,0.12) !important;
+  --quark-style-dark-gray-20-color: rgba(250,251,255,0.2) !important;
+  --quark-style-dark-gray-30-color: rgba(250,251,255,0.3) !important;
+  --quark-style-dark-gray-40-color: rgba(250,251,255,0.4) !important;
+  --quark-style-dark-gray-50-color: rgba(250,251,255,0.5) !important;
+  --quark-style-dark-gray-60-color: rgba(250,251,255,0.6) !important;
+  --quark-style-dark-gray-70-color: rgba(250,251,255,0.7) !important;
+  --quark-style-dark-gray-80-color: rgba(250,251,255,0.8) !important;
+  --quark-style-dark-gray-90-color: rgba(250,251,255,0.9) !important;
+  --quark-style-dark-gray-10-opaque-color: #19191A !important;
+  --quark-style-dark-gray-20-opaque-color: #323233 !important;
+  --quark-style-dark-gray-30-opaque-color: #4B4B4C !important;
+  --quark-style-dark-gray-40-opaque-color: #646466 !important;
+  --quark-style-dark-gray-50-opaque-color: #7D7E80 !important;
+  --quark-style-dark-gray-60-opaque-color: #969699 !important;
+  --quark-style-dark-gray-70-opaque-color: #AFAFB2 !important;
+  --quark-style-dark-gray-80-opaque-color: #C8C9CC !important;
+  --quark-style-dark-gray-90-opaque-color: #E1E2E6 !important;
+  --quark-style-dark-ash-color: #2B2D33 !important;
+  --quark-style-dark-ash-10-color: rgba(43,45,51,0.1) !important;
+  --quark-style-dark-ash-20-color: rgba(43,45,51,0.2) !important;
+  --quark-style-dark-ash-30-color: rgba(43,45,51,0.3) !important;
+  --quark-style-dark-ash-40-color: rgba(43,45,51,0.4) !important;
+  --quark-style-dark-ash-50-color: rgba(43,45,51,0.5) !important;
+  --quark-style-dark-ash-60-color: rgba(43,45,51,0.6) !important;
+  --quark-style-dark-ash-70-color: rgba(43,45,51,0.7) !important;
+  --quark-style-dark-ash-80-color: rgba(43,45,51,0.8) !important;
+  --quark-style-dark-ash-90-color: rgba(43,45,51,0.9) !important;
+  --quark-style-dark-ash-blue-color: #293033 !important;
+  --quark-style-dark-ash-blue-50-color: rgba(71,92,102,0.5) !important;
+  --quark-style-dark-ash-orange-color: #332F2E !important;
+  --quark-style-dark-ash-orange-50-color: rgba(102,94,92,0.5) !important;
+  --quark-style-dark-ash-purple-color: #2A2933 !important;
+  --quark-style-dark-ash-purple-50-color: rgba(76,71,102,0.5) !important;
+  --quark-style-dark-ash-theme-color: #262833 !important;
+  --quark-style-dark-ash-theme-50-color: rgba(66,72,102,0.5) !important;
+  --quark-style-dark-white-color: #363840 !important;
+  --quark-style-dark-white-10-color: rgba(54,56,64,0.1) !important;
+  --quark-style-dark-white-20-color: rgba(54,56,64,0.2) !important;
+  --quark-style-dark-white-30-color: rgba(54,56,64,0.3) !important;
+  --quark-style-dark-white-40-color: rgba(54,56,64,0.4) !important;
+  --quark-style-dark-white-50-color: rgba(54,56,64,0.5) !important;
+  --quark-style-dark-white-60-color: rgba(54,56,64,0.6) !important;
+  --quark-style-dark-white-70-color: rgba(54,56,64,0.7) !important;
+  --quark-style-dark-white-80-color: rgba(54,56,64,0.8) !important;
+  --quark-style-dark-white-90-color: rgba(54,56,64,0.9) !important;
+  --quark-style-dark-white-button-color: #585961 !important;
+  --quark-style-dark-blue-color: #66BFFF !important;
+  --quark-style-dark-blue-10-color: rgba(102,191,255,0.15) !important;
+  --quark-style-dark-blue-20-color: rgba(102,191,255,0.24) !important;
+  --quark-style-dark-blue-50-color: rgba(102,191,255,0.5) !important;
+  --quark-style-dark-orange-color: #FF764D !important;
+  --quark-style-dark-orange-10-color: rgba(255,118,77,0.12) !important;
+  --quark-style-dark-orange-20-color: rgba(255,118,77,0.22) !important;
+  --quark-style-dark-orange-50-color: rgba(255,118,77,0.5) !important;
+  --quark-style-dark-purple-color: #A699FF !important;
+  --quark-style-dark-purple-10-color: rgba(189,179,255,0.15) !important;
+  --quark-style-dark-purple-20-color: rgba(189,179,255,0.24) !important;
+  --quark-style-dark-purple-50-color: rgba(166,153,255,0.5) !important;
+  --quark-style-dark-red-color: #FF4D4D !important;
+  --quark-style-dark-theme-color: #6691FF !important;
+  --quark-style-dark-theme-10-color: rgba(102,145,255,0.15) !important;
+  --quark-style-dark-theme-20-color: rgba(102,145,255,0.24) !important;
+  --quark-style-dark-theme-50-color: rgba(102,145,255,0.5) !important;
+  --quark-style-dark-cyan-color: #91EAF2 !important;
+  --quark-style-dark-cyan-10-color: rgba(145,234,242,0.1) !important;
+  --quark-style-dark-cyan-20-color: rgba(145,234,242,0.2) !important;
+  --quark-style-dark-cyan-50-color: rgba(145,234,242,0.5) !important;
+  --quark-style-dark-sea-blue-color: #739BFF !important;
+  --quark-style-dark-sea-blue-10-color: rgba(115,155,255,0.1) !important;
+  --quark-style-dark-sea-blue-20-color: rgba(115,155,255,0.2) !important;
+  --quark-style-dark-sea-blue-50-color: rgba(115,155,255,0.5) !important;
+  --quark-style-black-fixed-color: #000 !important;
+  --quark-style-gray-10-fixed-color: rgba(6,10,38,0.06) !important;
+  --quark-style-gray-20-fixed-color: rgba(6,10,38,0.12) !important;
+  --quark-style-gray-30-fixed-color: rgba(6,10,38,0.24) !important;
+  --quark-style-gray-40-fixed-color: rgba(6,10,38,0.4) !important;
+  --quark-style-gray-50-fixed-color: rgba(6,10,38,0.5) !important;
+  --quark-style-gray-60-fixed-color: rgba(6,10,38,0.6) !important;
+  --quark-style-gray-70-fixed-color: rgba(6,10,38,0.7) !important;
+  --quark-style-gray-80-fixed-color: rgba(6,10,38,0.8) !important;
+  --quark-style-gray-90-fixed-color: rgba(6,10,38,0.9) !important;
+  --quark-style-gray-fixed-color: #060A26 !important;
+  --quark-style-transparent-fixed-color: rgba(255,255,255,0) !important;
+  --quark-style-white-fixed-color: #fff;
+}
+
+:host[color-scheme-lock='dark'] {
+  --quark-style-black-color: var(--quark-style-dark-black-color) !important;
+  --quark-style-font-white-color: var(--quark-style-dark-font-white-color) !important;
+  --quark-style-gray-color: var(--quark-style-dark-gray-color) !important;
+  --quark-style-gray-10-color: var(--quark-style-dark-gray-10-color) !important;
+  --quark-style-gray-20-color: var(--quark-style-dark-gray-20-color) !important;
+  --quark-style-gray-30-color: var(--quark-style-dark-gray-30-color) !important;
+  --quark-style-gray-40-color: var(--quark-style-dark-gray-40-color) !important;
+  --quark-style-gray-50-color: var(--quark-style-dark-gray-50-color) !important;
+  --quark-style-gray-60-color: var(--quark-style-dark-gray-60-color) !important;
+  --quark-style-gray-70-color: var(--quark-style-dark-gray-70-color) !important;
+  --quark-style-gray-80-color: var(--quark-style-dark-gray-80-color) !important;
+  --quark-style-gray-90-color: var(--quark-style-dark-gray-90-color) !important;
+  --quark-style-gray-10-opaque-color: var(--quark-style-dark-gray-10-opaque-color) !important;
+  --quark-style-gray-20-opaque-color: var(--quark-style-dark-gray-20-opaque-color) !important;
+  --quark-style-gray-30-opaque-color: var(--quark-style-dark-gray-30-opaque-color) !important;
+  --quark-style-gray-40-opaque-color: var(--quark-style-dark-gray-40-opaque-color) !important;
+  --quark-style-gray-50-opaque-color: var(--quark-style-dark-gray-50-opaque-color) !important;
+  --quark-style-gray-60-opaque-color: var(--quark-style-dark-gray-60-opaque-color) !important;
+  --quark-style-gray-70-opaque-color: var(--quark-style-dark-gray-70-opaque-color) !important;
+  --quark-style-gray-80-opaque-color: var(--quark-style-dark-gray-80-opaque-color) !important;
+  --quark-style-gray-90-opaque-color: var(--quark-style-dark-gray-90-opaque-color) !important;
+  --quark-style-ash-color: var(--quark-style-dark-ash-color) !important;
+  --quark-style-ash-10-color: var(--quark-style-dark-ash-10-color) !important;
+  --quark-style-ash-20-color: var(--quark-style-dark-ash-20-color) !important;
+  --quark-style-ash-30-color: var(--quark-style-dark-ash-30-color) !important;
+  --quark-style-ash-40-color: var(--quark-style-dark-ash-40-color) !important;
+  --quark-style-ash-50-color: var(--quark-style-dark-ash-50-color) !important;
+  --quark-style-ash-60-color: var(--quark-style-dark-ash-60-color) !important;
+  --quark-style-ash-70-color: var(--quark-style-dark-ash-70-color) !important;
+  --quark-style-ash-80-color: var(--quark-style-dark-ash-80-color) !important;
+  --quark-style-ash-90-color: var(--quark-style-dark-ash-90-color) !important;
+  --quark-style-ash-blue-color: var(--quark-style-dark-ash-blue-color) !important;
+  --quark-style-ash-blue-50-color: var(--quark-style-dark-ash-blue-50-color) !important;
+  --quark-style-ash-orange-color: var(--quark-style-dark-ash-orange-color) !important;
+  --quark-style-ash-orange-50-color: var(--quark-style-dark-ash-orange-50-color) !important;
+  --quark-style-ash-purple-color: var(--quark-style-dark-ash-purple-color) !important;
+  --quark-style-ash-purple-50-color: var(--quark-style-dark-ash-purple-50-color) !important;
+  --quark-style-ash-theme-color: var(--quark-style-dark-ash-theme-color) !important;
+  --quark-style-ash-theme-50-color: var(--quark-style-dark-ash-theme-50-color) !important;
+  --quark-style-white-color: var(--quark-style-dark-white-color) !important;
+  --quark-style-white-10-color: var(--quark-style-dark-white-10-color) !important;
+  --quark-style-white-20-color: var(--quark-style-dark-white-20-color) !important;
+  --quark-style-white-30-color: var(--quark-style-dark-white-30-color) !important;
+  --quark-style-white-40-color: var(--quark-style-dark-white-40-color) !important;
+  --quark-style-white-50-color: var(--quark-style-dark-white-50-color) !important;
+  --quark-style-white-60-color: var(--quark-style-dark-white-60-color) !important;
+  --quark-style-white-70-color: var(--quark-style-dark-white-70-color) !important;
+  --quark-style-white-80-color: var(--quark-style-dark-white-80-color) !important;
+  --quark-style-white-90-color: var(--quark-style-dark-white-90-color) !important;
+  --quark-style-white-button-color: var(--quark-style-dark-white-button-color) !important;
+  --quark-style-blue-color: var(--quark-style-dark-blue-color) !important;
+  --quark-style-blue-10-color: var(--quark-style-dark-blue-10-color) !important;
+  --quark-style-blue-20-color: var(--quark-style-dark-blue-20-color) !important;
+  --quark-style-blue-50-color: var(--quark-style-dark-blue-50-color) !important;
+  --quark-style-orange-color: var(--quark-style-dark-orange-color) !important;
+  --quark-style-orange-10-color: var(--quark-style-dark-orange-10-color) !important;
+  --quark-style-orange-20-color: var(--quark-style-dark-orange-20-color) !important;
+  --quark-style-orange-50-color: var(--quark-style-dark-orange-50-color) !important;
+  --quark-style-purple-color: var(--quark-style-dark-purple-color) !important;
+  --quark-style-purple-10-color: var(--quark-style-dark-purple-10-color) !important;
+  --quark-style-purple-20-color: var(--quark-style-dark-purple-20-color) !important;
+  --quark-style-purple-50-color: var(--quark-style-dark-purple-50-color) !important;
+  --quark-style-red-color: var(--quark-style-dark-red-color) !important;
+  --quark-style-theme-color: var(--quark-style-dark-theme-color) !important;
+  --quark-style-theme-10-color: var(--quark-style-dark-theme-10-color) !important;
+  --quark-style-theme-20-color: var(--quark-style-dark-theme-20-color) !important;
+  --quark-style-theme-50-color: var(--quark-style-dark-theme-50-color) !important;
+  --quark-style-cyan-color: var(--quark-style-dark-cyan-color) !important;
+  --quark-style-cyan-10-color: var(--quark-style-dark-cyan-10-color) !important;
+  --quark-style-cyan-20-color: var(--quark-style-dark-cyan-20-color) !important;
+  --quark-style-cyan-50-color: var(--quark-style-dark-cyan-50-color) !important;
+  --quark-style-sea-blue-color: var(--quark-style-dark-sea-blue-color) !important;
+  --quark-style-sea-blue-10-color: var(--quark-style-dark-sea-blue-10-color) !important;
+  --quark-style-sea-blue-20-color: var(--quark-style-dark-sea-blue-20-color) !important;
+  --quark-style-sea-blue-50-color: var(--quark-style-dark-sea-blue-50-color);
+}
+
+/* ！！！切勿直接改动该文件，该文件由 generator.ts 自动生成！！！ */
+/* !!! DONT MODIFY THIS FILE DIRECTLY, THIS FILE IS GENERATED BY generator.ts AUTOMATICALLY !!! */
+.e3zH6k66lhwQmue02OIo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2147483647;
+  user-select: none;
+  touch-action: none;
+}
+
+/* ！！！切勿直接改动该文件，该文件由 generator.ts 自动生成！！！ */
+/* !!! DONT MODIFY THIS FILE DIRECTLY, THIS FILE IS GENERATED BY generator.ts AUTOMATICALLY !!! */
+.XSolLBOPzLIewWIcymdz {
+  opacity: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--quark-style-white-color, #fff);
+  border: 1px solid var(--quark-style-gray-10-color, rgba(6, 10, 38, 0.06));
+  border-radius: 50%;
+  box-shadow: 0 2px 8px -4px var(--quark-style-gray-30-fixed-color, rgba(6, 10, 38, 0.24));
+}
+.biVUpvN93EmkOJwL3_S9 {
+  width: 100%;
+  height: 100%;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAAEgBckRAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAMKADAAQAAAABAAAAMAAAAAD4/042AAAGIUlEQVRoBe1ZS2hdRRj+59zUpuXm2go+6rZBKeiq7rWIS7HNTSzYhZKViCtru9L0EUGw1pXo2oULzVMFd+LOVYoLA4Lo0vgCxeSSFpJ7x++fnP/knzNzXvcWRcjAzfzvx5x5/DMhKmhG6BNdawXeWjImYSQlDpig8IwhCk7QaWgpMVnoI1PPA+JsAIaDEdvV3rK55gTFLiMCJwA2HTf3J0HsHaGJNOMuXGuoK0RJUoS9vt21H0NwC7/XPAYQnV8WcV6IcfbWWzTLY4ywRXROOeaawzKWlljGKUDyFpAX8POaxK+JWUjtKXsF3+6qZmo45lnz7x6chSQm7z1rTw5a9CXwDYRxRujSKwVrJrrEQxs0HX+mEBsRrSlKeo47PjPkB8JlUepM2esMZ1OcEbhb4F4aFG8IjC/9JsOewuGEZkWgqHdfWph3BvQn4HsYP3bWHuu36C/hSS8eeinh0MS0XWYYwt+IEPd2QA9yP9wosaYMG8NeM/RbIc8T/K+QLOdYAFVLJNXpjSd04o8FIwPtmYo4KJ6znmYE4Ym1uWSe1yz5zI7GERctCFbGUnkU0U5g+7gAhR1tiGFs9DP5NZJlkC7LH/NKVV/YzTtL54r0sgzSNe/LIWKfEGJbi2YqpO5T9NLZAPmRfRZmvaEngP+gaQLz0kJQb2NYnhRarM8ywFCcyQtgxfMBcSlP73Tth7xuYfxl8E7l+cDXhZZ9AybcP2Pb2AC2hDlUzytz0Twkup4DISLCT3lGCF6330roKC2Y21o+6kALdKbtPA7zNzRNwevYpZ7urZjfFe0AbDYCld+AzWGqch3zLH68LjYwAdZafZr7e9X8BLy0FTpIp+wv0G6XWfCquYhg1EHNbVqbs1tL1MLaR3J+CxwMuwbYLJxgZ/CdeA7a03YqreT8MOpjyGSvIheVbC9iQonxHfAu8FnAZwKi8ioWMcYmeHgVvl8mlKzYy4gqK3m0MmZXH7gXJPP1GZINUf4kcoYMrVTt9zG9pE+TMoUD785w+qfKOIvFhgtb+XWxU+pAhMp6bHbBRginvCBdG9nB0Tb9LMZUf0JgfWQKrVaPsZ/Fqjq/vU3PRBT4nuJaqQOuNORjiQL3MM5l7/FshmjmHvyFkPQQZeeoMHGoB2VMyjsuMrEe0/Q9oWcO+GQSou55GnImmlYB9zTfyxJF1K8oz1yhroWawLzadZ2aZcBGdDXQxKjI8tatjTPdc8AEVxkw0LDxgstu+UrXGyJFpybDJZdvrS9woQMWaJ+zD2Dz/QrgY6Kge+yw85vLZk7TDuCDEbjbI1A6Sauc8SRODL2KVcA3tOhELrGxjkm+MrD0/ii1eeMEXOFE9MGoO2KQGK5FOL1e4be4gFdCqJfAjD3SGdBHcND4SlXiu5CFoBY2E3oxfxWLKQQ7dV7IvSwMaPvfCp79s68J+MxXoPnYGC/8Au7qYXHcj3h4xpw2omFqjRuazJ+RYiOaQHrC8MWr9N4kRlyPCjnZpUuxAkrLueecMbqBgQmeZrRcDu6h3DkZW+zRBFADfQcDdXeVwntDLogAhR9+YHknYMQJ6yjkHs+zggRglK/CN/OCEXwH94tTVSMe0fNI6QPb9yAe8hhx5KKuRlkktoj5Hl/ZsIe/NGrw7IRtsK1Kh3sCQWyxBLI7T5nRwy36vIzfhNfAVhBbLAF+caxsd3bp4UqhmgLbu1T3zhHEFlzLsAevYWF4T6axOFAHvwW69zQdk9M0nOJPYbosgXafpteFOba8bPAF+O0qLxTD3WGT/ockxs/TsDnMIvivQR8qeLYXiy1IwC0q40Y3H0OIYy9HYP10Owz5ioKEzyu0MYjk52ObRrCNiuUh3ulYdQcGV3FIreKGuTY+RhvJONlejyaThL4Fv9Cf+I31ZQ+NpQbTJ7vFYR3HgmlIw39/abqsQi1NYM+ZNZ0ufcJzvqHzkcQRGP5/xdMOk6ek1UhAtC3eJ2kO/8S5AkoDPdGv1VtMl2u9ZX7gKw9crA0VCFeqt/t0Ecm8DkP1Cz7x6vc9BP3ukRbdLKo4fXEfGyoB38QeltY0z+F7n4ZRPuTkxwJ8APG/GDbAu4Ua6rPYjsKCB+3/NgL/AIFQFInJX8cZAAAAAElFTkSuQmCC);
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-position: center;
+  cursor: pointer;
+}
+.yp3mGzKWHiMEs5Yf5adM {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAABCCAYAAADjVADoAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAQqADAAQAAAABAAAAQgAAAADorYEXAAAF6ElEQVR4Ae1cTWzcRBR+42z/aJOiSIhDtyeoQhAXeuBQwaEgqHqiBSKkBrU3LiAhgaCIA80J8dMcigj3BhaEAqUIJAQIigTncgARqsCJ7QkphyQ0tNms+T577Hqzttdezyy7a55keXb8Zt57n9+M5+fNKukB7XrMrY44cr/jyiTETTRFDiiRcaRH9UUtVnm5IsuOyBLSV5pKFjeb8uP6BVUng02CPhZoxnV2/yKHnaZMiZIHIeFAQSlL4sp3TUcW/r5HLsmMApZmySgQux5191cq8gxUnMZVNatqWBu9o9ZoyNz6Z+rPMLdgwggQY1Pune6mnMbbPwV9thXUKWvxDXjJeTUib6wsqN+zFkriKwTEbVPunn9cmYFCz0FAJUmI5fwGXsC5nUpm/lpQa93K6hqI0cfdYxD6Dq593Qo3XO4q6nt29RN1sZt68wNx1N0xdovMondnX9B3BIPmVq7JC/Klup5HuVxAsDMcqchFFDqYR0ivefGSLm825FiezjQzEHum3Lvx0foKRtn6GpjGq+46cmRtQf2apWKMXToTvgr3AYQfwDkoINCoKnWm7p0tFPS3HUh7AkHgSHAQaRme8UAnz0j1CPYJujkMKgh8ceO0gbakvcVkIPB1YMeIwoPUHJJsrXq2wKYkhkQg+Ins969DklFx+bSFNsU9Y15sH6EHS58mFRrw/ONxg642ILxhc1N+g7FWR4zbMSB/5UnMzg77sNYuibz2kciNhnWYr+505K6tw/G2puHNHSyDsAPTsg9Pizx/XOT2W/2LaebxmWXap21sEdPiEd4ssimL4LA2gaKhH7wk8vC9LXqEP775SeTEmyLXN8IsG4mGcmQyOmtt8Qi3KS9D6n8GAi0mQATKsmdUtK0hyKFH6EWVP/DEinN28oRQI53ogWdsYHHnjmA+EnqEXlnqCxCIRQ88Y5u22YPeBwJrjPjF5TXjRE+ovZjcJ6QJJBgsa7GZTItvu3hAcKEVChkfQQYgPFJg0s6yFsGoatt9ILzV5rRX08UzEyAEYm2CEdjuNw1/yT2QW/huEoRAGWtgaNsVN18qSowti9sAIQCD968vozN7y+w4o+HKfoc7UFFBRdK2QaBuNjzD24XT23BF7PfKcu7ATo2K2qYADMo0QcSAfcSEicrOnOgNCIGuBONVyDREE+g0C+9LeroEs0hDimWq5ik9c83EnMJEDByMscdTeDI/whJ6z8mUTGLApsGt+cL07heFq8hdwdznuYskFRhld2MEiLMXRPbuFqG7jhupMUlnBFAgkuJ9LOTMmltDG1VYluPW2PZkseaerHycr66xJ/LxF+C+wabBSJWy0+r/QPgusIqxhCyX3R2IgQOXWCo7EMSATeNK2YEgBg5D+MoOBDFwGMdYdiCIgaODOcvcTywRA/YRwmDO0nqFtt0DghGtZQUisN0DwgvrFamXEIy6tt1fxdaxzTXbQKytZ5eQhzd7rW2ctSCu2+8j8JyxzbhZ3XpdzLFEnIe3zbxsGdzyo80ehUDoPcD54IGN+3s5uuQ8vF3pijjuYN+T5UMg+ANb5a/jZi1U4/y3It//TEnpRB7yWqQGg9mj9bcA4cULIMA7ymAy7WJ28/Tb6WAQBPKQ1xrBxmhsBOVgua6VehE6pCD11EMiJ3FN6qA/9gnz8AJ6glUQRGJDh9qAICxlDCZraRqBbzDqDAiFPWqQP+h32hQXUUe7YoHgA4b6o5lip3E4iLZ4xxcSzEkEgucdGOqPcsMw4qx7tqSc4UgGAgjwO8tQfyQHeTmPQelHomOGOKdIBYIFGNWO8cXRAQVjmbp3isynnbFfDT7YSsN+cCUzEARmmI8ydWwaUc9gO1u7Jof6+dNK3ahjpz4hahfTuTwiWnjYjjvm8ogoEByYMModUPIMhLWJWlRmQpoHYGepS9JgKaFcS3bXHhGtRQezM477JC4r0btReTrNtZN5zpi3TqBieDtmGQEikKLjuXkwdhqX8QBWLYcDvP48JK8VvHkr+98m3ESiNTUIf6TxL//v7Wf4ApoNAAAAAElFTkSuQmCC);
+  background-repeat: no-repeat;
+  background-size: 22px;
+  background-position: center;
+}
+.aYBJEvmlh_g6IdOKGoYZ {
+  opacity: 0;
+  position: absolute;
+  bottom: -2px;
+  left: -1px;
+  width: 12px;
+  height: 12px;
+  background-color: var(--quark-style-white-color, #fff);
+  border-radius: 50%;
+  box-shadow: 0 2px 6px -2px var(--quark-style-gray-20-fixed-color, rgba(6, 10, 38, 0.12));
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  transition: opacity 140ms ease-in-out;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.Cj6lE78WHXKONOtnaYRt {
+  opacity: 1;
+}
+.dTHVKTmUzVyuqBT2cvYV {
+  position: absolute;
+  bottom: -8px;
+  left: -2px;
+  width: 40px;
+  height: 16px;
+  background-image: linear-gradient(90deg, #4079ff 0%, #618eff 100%);
+  border: 1px solid var(--quark-style-white-20-color, rgba(255, 255, 255, 0.2));
+  border-radius: 16px;
+  font-family: MicrosoftYaHeiSemibold;
+  font-size: 10px;
+  color: var(--quark-style-white-fixed-color, #fff);
+  letter-spacing: 0;
+  line-height: 16px;
+  text-align: center;
+}
+.uk0EI1YoIhQV5lLx72Gd {
+  background: var(--quark-style-theme-color, #0D53FF);
+  border-radius: 20px;
+  height: 28px;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: MicrosoftYaHeiSemibold;
+  font-size: 20px;
+  color: var(--quark-style-white-fixed-color, #fff);
+  letter-spacing: 0;
+  font-weight: 600;
+  padding: 0 8px;
+  line-height: 28px;
+  position: absolute;
+  top: -3px;
+  left: 25px;
+  opacity: 1;
+  transition: opacity 40ms ease-in-out;
+  transform: scale(0.5, 0.5);
+  transform-origin: top left;
+}
+.AHVbJB6gFu6rOlkqoEm3 {
+  opacity: 0;
+}
+.tBJRAeZtTiYIkudq6Gdw {
+  width: 36px;
+  background-color: var(--quark-style-ash-90-color, rgba(247, 248, 250, 0.9));
+  border: 1px solid var(--quark-style-gray-20-color, rgba(6, 10, 38, 0.12));
+  box-shadow: 0 32px 64px -12px var(--quark-style-gray-30-fixed-color, rgba(6, 10, 38, 0.24));
+  border-radius: 18px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 200ms ease-in-out, top 200ms ease-out, bottom 200ms ease-out;
+  padding: 7px 0;
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 0;
+  box-sizing: border-box;
+}
+.tBJRAeZtTiYIkudq6Gdw .uk0EI1YoIhQV5lLx72Gd {
+  opacity: 0;
+}
+.D2QXqgNdAuORvciE6wL5 {
+  bottom: initial;
+  top: 46px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.D2QXqgNdAuORvciE6wL5 .uk0EI1YoIhQV5lLx72Gd {
+  opacity: 1;
+}
+.JmIjWvvFODdT23_Q6zUO {
+  bottom: 0;
+  top: initial;
+  flex-direction: column-reverse;
+}
+.jgVnGFgtgcSOSgr8xCaS {
+  bottom: 46px;
+  top: initial;
+  opacity: 1;
+  pointer-events: auto;
+}
+.Oef5CvgqF1l6ng6Iz15g {
+  width: 28px;
+  height: 28px;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: center;
+  border-radius: 14px;
+  position: relative;
+  margin: 4px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.Oef5CvgqF1l6ng6Iz15g:hover {
+  background-color: var(--quark-style-gray-10-color, rgba(6, 10, 38, 0.06));
+}
+.yTmAAv9tgUCqpHw0lM49 {
+  color: var(--quark-style-gray-color, #060A26);
+}
+.yTmAAv9tgUCqpHw0lM49 .uk0EI1YoIhQV5lLx72Gd {
+  left: 20px;
+}
+.oGfMh4LUKxLu3e33KPMT {
+  color: var(--quark-style-gray-30-color, rgba(6, 10, 38, 0.24));
+  cursor: default;
+}
+.oGfMh4LUKxLu3e33KPMT:hover {
+  background-color: transparent;
+}
+.uoPeDWIL7Bew0BnSG_kJ {
+  color: var(--quark-style-gray-color, #060A26);
+}
+.VTHEjIMmr55z8XgFlISu {
+  background: var(--quark-style-white-color, #fff);
+  border: 1px solid var(--quark-style-gray-20-color, rgba(6, 10, 38, 0.12));
+  box-shadow: 0 8px 32px -6px var(--quark-style-gray-20-fixed-color, rgba(6, 10, 38, 0.12));
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  left: calc(100% + 9px);
+  font-family: MicrosoftYaHei;
+  font-size: 12px;
+  color: var(--quark-style-gray-color, #060A26);
+  letter-spacing: 0;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 0 6px;
+  display: none;
+}
+.z41efHc6PAuGM9kK7ikX {
+  left: initial;
+  right: calc(100% + 9px);
+}
+.Oef5CvgqF1l6ng6Iz15g:hover .VTHEjIMmr55z8XgFlISu {
+  display: block;
+}
+
+/* ！！！切勿直接改动该文件，该文件由 generator.ts 自动生成！！！ */
+/* !!! DONT MODIFY THIS FILE DIRECTLY, THIS FILE IS GENERATED BY generator.ts AUTOMATICALLY !!! */
+.do4DWVTDGANA86tut2Z6 path {
+  fill: var(--icon-path-fill);
+}
+.OwbGqGXfBn_6Xfv3aYdM path {
+  transition: 0.2s all;
+}
+.OwbGqGXfBn_6Xfv3aYdM:hover path {
+  fill: var(--icon-hover-fill);
+}
+
+/* ！！！切勿直接改动该文件，该文件由 generator.ts 自动生成！！！ */
+/* !!! DONT MODIFY THIS FILE DIRECTLY, THIS FILE IS GENERATED BY generator.ts AUTOMATICALLY !!! */
+.b26sQwhv2rKauvA1j_dY {
+  z-index: 2147483647 !important;
+  user-select: none;
+}
+.h1sZVJQlYDmrFR79Mb9K {
+  max-width: 362px;
+  width: auto;
+  height: 36px;
+  background-color: var(--quark-style-white-color, #fff);
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid var(--quark-style-gray-20-color, rgba(6, 10, 38, 0.12));
+  box-shadow: 0 12px 32px -6px var(--quark-style-gray-30-fixed-color, rgba(6, 10, 38, 0.24));
+  border-radius: 10px;
+}
+.h1sZVJQlYDmrFR79Mb9K .jzjAc8mr67PK74GLt2Ma {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 6px;
+}
+.h1sZVJQlYDmrFR79Mb9K .ncKwupflF1nZUghMBvFA {
+  width: 16px;
+  height: 16px;
+}
+.h1sZVJQlYDmrFR79Mb9K .ML4JXwUkb14Af1EIMaBt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 28px;
+  padding: 0 6px;
+  margin-right: 2px;
+  border-radius: 6px;
+  column-gap: 3px;
+}
+.h1sZVJQlYDmrFR79Mb9K .ML4JXwUkb14Af1EIMaBt:hover:not(.h1sZVJQlYDmrFR79Mb9K .b_SJTxOI1uROFhI6zrhM) {
+  background: var(--quark-style-gray-10-color, rgba(6, 10, 38, 0.06));
+}
+.h1sZVJQlYDmrFR79Mb9K .b_SJTxOI1uROFhI6zrhM {
+  cursor: default;
+}
+.h1sZVJQlYDmrFR79Mb9K .b_SJTxOI1uROFhI6zrhM .qwkG4j8rmBiMHjRUhJeS {
+  color: var(--quark-style-gray-40-color, rgba(6, 10, 38, 0.4)) !important;
+}
+.h1sZVJQlYDmrFR79Mb9K .ML4JXwUkb14Af1EIMaBt .qwkG4j8rmBiMHjRUhJeS {
+  font-size: 12px;
+  color: var(--quark-style-gray-color, #060A26);
+  line-height: 16px;
+  white-space: nowrap;
+  position: relative;
+  top: 1px;
+}
+.h1sZVJQlYDmrFR79Mb9K .ML4JXwUkb14Af1EIMaBt .zdQFd3xGhN8sMBadYFSp {
+  width: 16px;
+  height: 16px;
+}
+.h1sZVJQlYDmrFR79Mb9K .QVFWPdSNwzvD9tnvMvyU {
+  position: relative;
+  width: 28px;
+  height: 28px;
+}
+.h1sZVJQlYDmrFR79Mb9K .zo_m3IguV07g4acTiPFv {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.h1sZVJQlYDmrFR79Mb9K .zo_m3IguV07g4acTiPFv:hover {
+  background: var(--quark-style-gray-10-color, rgba(6, 10, 38, 0.06));
+}
+.h1sZVJQlYDmrFR79Mb9K .VYOyfN_tF7bY8llcZJ23 {
+  width: 16px;
+  height: 16px;
+}
+.h1sZVJQlYDmrFR79Mb9K .mJILneJLwW8jDL9cHv2V {
+  box-sizing: border-box;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 110px;
+  max-height: 136px;
+  height: auto;
+  top: 36px;
+  right: -4px;
+  padding: 4px 0;
+  background-color: var(--quark-style-white-color, #fff);
+  border: 1px solid var(--quark-style-gray-20-color, rgba(6, 10, 38, 0.12));
+  box-shadow: 0 4px 16px -6px var(--quark-style-gray-20-fixed-color, rgba(6, 10, 38, 0.12));
+  border-radius: 8px;
+  row-gap: 4px;
+}
+.h1sZVJQlYDmrFR79Mb9K .C_aY13XJ2Ss_21TC3jyC {
+  top: -144px;
+}
+.h1sZVJQlYDmrFR79Mb9K .ZhhcparFhGCiAK9mMLQF {
+  width: 102px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  column-gap: 8px;
+  border-radius: 6px;
+  padding: 0 6px;
+  box-sizing: border-box;
+}
+.h1sZVJQlYDmrFR79Mb9K .ZhhcparFhGCiAK9mMLQF:hover:not(.h1sZVJQlYDmrFR79Mb9K .Olg4PLyIQHmuea332UDY) {
+  background: var(--quark-style-gray-10-color, rgba(6, 10, 38, 0.06));
+}
+.h1sZVJQlYDmrFR79Mb9K .Olg4PLyIQHmuea332UDY {
+  cursor: default;
+}
+.h1sZVJQlYDmrFR79Mb9K .Olg4PLyIQHmuea332UDY .fnI5olbnA6Q3NiDklSm7 {
+  color: var(--quark-style-gray-40-color, rgba(6, 10, 38, 0.4)) !important;
+}
+.h1sZVJQlYDmrFR79Mb9K .U8MU_Ksdc0yoieRsZ7gI {
+  width: 16px;
+  height: 16px;
+}
+.h1sZVJQlYDmrFR79Mb9K .fnI5olbnA6Q3NiDklSm7 {
+  font-size: 12px;
+  color: var(--quark-style-gray-color, #060A26);
+}
+.h1sZVJQlYDmrFR79Mb9K .ekip__pHnbH4PhotX4Pk {
+  width: 100%;
+  height: 1px;
+  background: var(--quark-style-gray-10-color, rgba(6, 10, 38, 0.06));
+}
+
+/* ！！！切勿直接改动该文件，该文件由 generator.ts 自动生成！！！ */
+/* !!! DONT MODIFY THIS FILE DIRECTLY, THIS FILE IS GENERATED BY generator.ts AUTOMATICALLY !!! */
+.wWdv12BtYwZDhJc5qsT_ {
+  width: 100%;
+  height: 100%;
+  z-index: 2147483647;
+  border: none;
+  border-radius: 14px;
+  user-select: none;
+}
+
+/* ！！！切勿直接改动该文件，该文件由 generator.ts 自动生成！！！ */
+/* !!! DONT MODIFY THIS FILE DIRECTLY, THIS FILE IS GENERATED BY generator.ts AUTOMATICALLY !!! */
+.xKGubsWYdZJpyzA5ddhy {
+  background: var(--quark-style-white-color, #fff);
+  border: 1px solid var(--quark-style-gray-20-color, rgba(6, 10, 38, 0.12));
+  box-shadow: 0 12px 32px -6px var(--quark-style-gray-30-fixed-color, rgba(6, 10, 38, 0.24));
+  border-radius: 14px;
+}
+
+/* ！！！切勿直接改动该文件，该文件由 generator.ts 自动生成！！！ */
+/* !!! DONT MODIFY THIS FILE DIRECTLY, THIS FILE IS GENERATED BY generator.ts AUTOMATICALLY !!! */
+.XiVSaT09RdweN4RLxpTD {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2147483648;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 120ms;
+}
+.sj_xlKA9qBXkoe5vEYPs {
+  margin-bottom: 20vh;
+  padding: 24px;
+  border-radius: 4px;
+  width: 500px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: var(--quark-style-white-color, #fff);
+  border-radius: 15px;
+  border: 1px solid var(--quark-style-gray-20-color, rgba(6, 10, 38, 0.12));
+  box-shadow: 0 12px 32px -6px var(--quark-style-gray-30-fixed-color, rgba(6, 10, 38, 0.24));
+}
+.sj_xlKA9qBXkoe5vEYPs .q9KZ51QPqGrNKFQQd_p0 {
+  font-size: 20px;
+  color: var(--quark-style-gray-color, #060A26);
+  line-height: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.sj_xlKA9qBXkoe5vEYPs .jcVybfU3WmP9FuZAmPVY {
+  font-size: 14px;
+  color: var(--quark-style-gray-60-color, rgba(6, 10, 38, 0.6));
+  text-align: justify;
+  line-height: 24px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.gIOr8TrinpeJpZcvR2GU {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.gIOr8TrinpeJpZcvR2GU .R0NqKpCPvxqpqr2EWZow {
+  color: var(--quark-style-gray-color, #060A26);
+  background: var(--quark-style-white-color, #fff);
+  border: 1px solid var(--quark-style-gray-20-color, rgba(6, 10, 38, 0.12));
+}
+.gIOr8TrinpeJpZcvR2GU .Cy6jiEJ1Img9rWXyYLcu {
+  color: var(--quark-style-white-fixed-color, #fff);
+  background-color: var(--quark-style-sea-blue-color, #4D80FF);
+  margin-right: 10px;
+  border: 1px solid var(--quark-style-gray-10-color, rgba(6, 10, 38, 0.06));
+}
+.gIOr8TrinpeJpZcvR2GU .xpbRejsm0eR6Dn7c3bns {
+  border-radius: 8px;
+  letter-spacing: 0;
+  line-height: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  width: 52px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ！！！切勿直接改动该文件，该文件由 generator.ts 自动生成！！！ */
+/* !!! DONT MODIFY THIS FILE DIRECTLY, THIS FILE IS GENERATED BY generator.ts AUTOMATICALLY !!! */
+.Vlxa4Kh4FEGi21wPA3mp {
+  opacity: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--quark-style-white-color, #fff);
+  border: 1px solid var(--quark-style-gray-10-color, rgba(6, 10, 38, 0.06));
+  border-radius: 14px;
+  box-shadow: 0 2px 8px -4px var(--quark-style-gray-30-fixed-color, rgba(6, 10, 38, 0.24));
+}
+.DeE9HvAwSPPPzXjqEAsR {
+  width: 100%;
+  height: 100%;
+}
+.ZUxoshW0LvxaZSZdSZKw {
+  height: 13px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background: transparent;
+  z-index: 9;
+  left: 0;
+}
+.wdPIYyTqcyCUy7IduMTQ {
+  position: absolute;
+  background-color: transparent;
+  bottom: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* ！！！切勿直接改动该文件，该文件由 generator.ts 自动生成！！！ */
+/* !!! DONT MODIFY THIS FILE DIRECTLY, THIS FILE IS GENERATED BY generator.ts AUTOMATICALLY !!! */
+._uFhnlsdwLItTwVOo4VW {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  visibility: visible !important;
+  z-index: 2147483647 !important;
+}
+
+</style></html>

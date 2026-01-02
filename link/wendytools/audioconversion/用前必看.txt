@@ -1,0 +1,18 @@
+由bilibili-strivess8分享
+由github已封作者编写，请勿侵权
+双击index.html运行
+记得三连 老爹们
+qq群号：832288765
+
+//群主在2月24日后只有周末回消息 工作日有问题的@管理员//
+进群的大大们发三连截图后即可自取文件（网址类都在群公告）
+！！！使用音乐转码的去看群文件！！！
+新手看这：
+先右键zip压缩包进行解压再使用，否则css和js文件无法导入
+转码歌曲出现问题的大大们（mflac、mgg等无法转码的），把qq音乐卸载，然后打开https://dldir1v6.qq.com/music/clntupate/QQMusic_Setup_1951.exe
+安装旧版qq音乐，然后重新下载音乐
+文件后缀是.kgm.flac的删去.flac再转码
+—————————————————————
+想用联网网站的我不推荐！（手机版可用 部分音乐无法转码）：
+音乐解锁（不建议！）：https://cwo.cc/musicc
+转换格式（不建议！）：https://cloudconvert.com/
